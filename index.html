@@ -182,9 +182,97 @@
                     </div>
                 </div>
             </section>
+
+            <section id="contact">
+                <div class="contact_container">
+                    <h1>Contact</h1>
+                    <form class="contact_form" action="#">
+                        <div class="contact_form_detail">
+                            <input type="text" placeholder="Nom" id="name">
+                        </div>
+        
+                        <input type="email" placeholder="Email" id="email" autocomplete="off">
+                        <input type="text" placeholder="Objet" id="subject" autocomplete="off">
+                        <textarea placeholder="Contenu" id="message" ></textarea>
+        
+                        <button class="btn" type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </section>  
         </main>
+        <div class="footer-wrapper">
+            <footer id="footer" class="footer">
+                    <div class="content__inner">
+                        <div class="nav">
+                            <div class="col">
+                                <li>
+                                    <a class="buttonLink">
+                                        Menu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#home">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#home">
+                                        A Propos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#projetGalerie">
+                                        Projets
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#competencesSection">
+                                        Compétences
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#contact">
+                                        Contact
+                                    </a>
+                                </li>
+                            </div>
+        
+                            <div class="col">
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/in/yulian-guinand/">
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://github.com/YulianGuinand">
+                                        Github
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+        
+                        <div class="copyright">
+                            <span>2024. All right reserved.</span>
+                            <span>Site by <u>Yulian</u>.</span>
+                        </div>
+                    </div>
+            </footer>
+        </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        gsap.from(".footer", {
+            y: -5000,
+            scrollTrigger: {
+              trigger: ".content",
+              start: "bottom bottom",
+              scrub: true,
+            },
+        })
+    </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="./index.js"></script>
