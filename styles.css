@@ -393,3 +393,64 @@ main {
     justify-content: center;
     animation: infScroll 1.5s infinite;
 }
+
+/* Contact Section */
+
+#contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.contact_container {
+    width: 35%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+
+@media (max-width: 950px) {
+    .contact_container {
+        Width: 100%;
+        padding: 2rem 2rem;
+    }   
+}
+
+.contact_container .contact_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact_container .contact_form input {
+    font-family: "Epilogue", sans-serif;
+    outline: none;
+    padding: 1rem 2rem;
+    border: 1px solid #2D2D2D;
+    letter-spacing: 2px;
+    color: #2D2D2D;
+    font-weight: 500;
+}
+
+.contact_container .contact_form textarea {
+    outline: none;
+    padding: 2rem;
+    width: 100%;
+    height: 150px;
+    font-family: "Epilogue", sans-serif;
+    border: 1px solid #2D2D2D;
+    color: #2D2D2D;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.contact_container .contact_form .contact_form_detail input {
+    width: 100%;
+    padding: 1rem 2rem;
+}
