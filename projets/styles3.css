@@ -196,6 +196,69 @@ main {
     padding: 7rem 2rem 4rem 2rem;
 }
 
+.projet_title h1 {
+    font-size: 5em;
+}
+
+.projet_content {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.projet_image {
+    width: 70%;
+    height: 100%;
+    background: red;
+}
+
+.projet_details {
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.projet_number {
+    width: 25%;
+    height: 100%;
+}
+
+.projet_description {
+    width: 100%;
+    line-break: anywhere;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projet_description p {
+    width: 70%;
+}
+
+.projet_link {
+    align-self: flex-end;
+    width: fit-content;
+    text-decoration: none;
+    color: #2D2D2D;
+    position: relative;
+}
+
+.projet_link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #2D2D2D;
+    bottom: 0;
+    left: 0;
+    transition: width .3s ease-in;
+}
+
+.projet_link:hover::after {
+    width: 100%;
+}
+
 /* Footer */
 
 .footer-wrapper {
