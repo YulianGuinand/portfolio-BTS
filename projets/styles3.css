@@ -259,6 +259,32 @@ main {
     width: 100%;
 }
 
+@media (max-width: 950px) {
+    #projet_section {
+        height: 100%;
+    }
+    .projet_title h1 {
+        font-size: 3em;
+    }
+    .projet_image {
+        height: 300px;
+    }
+    .projet_content {
+        align-items: center;
+        flex-direction: column;
+    }
+    .projet_details {
+        margin-top: 1rem;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .projet_description {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
 /* Footer */
 
 .footer-wrapper {
