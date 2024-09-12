@@ -4,6 +4,24 @@ const email = document.getElementById('email');
 const subject = document.getElementById('subject');
 const message = document.getElementById('message');
 
+const initLenis = () => {
+    const lenis = new Lenis({
+        content: document.querySelector('.frame'),
+
+        lerp: 0.08,
+        smoothWheel: true,
+        orientation: 'vertical',
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+}
+
+initLenis();
 
 function sendEmail() {
     const body = `[PORTFOLIO-EMAIL] Name : ${name.value} <br>Email : ${email.value} <br>Sujet : ${subject.value} <br>Message : ${message.value}`;
