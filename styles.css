@@ -1,5 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Epilogue", sans-serif;
+    color: #2D2D2D;
+    background-color: #ebebeb;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    margin-bottom: 400px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    color: #fff;
+    mix-blend-mode: difference;
+    z-index: 99999;
+}
+
+.navbar > div {
+    flex: 1;
+}
+
+.logo {
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+}
+
+.toggle-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.75em 2em 1.5em 2em;
+    background: #000;
+    outline: none;
+    border: none;
+    width: 28px;
+    height: 20px;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+}
+
+.burger:before,
+.burger:after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background: #fff;
+    transition: all 250ms ease-out;
+    will-change: transform;
+}
+
+.burger:before {
+    transform: translateY(-3px);
+}
+
+.burger:after {
+    transform: translateY(3px);
+}
+
+.active.burger:before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.overlay {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    background: #2D2D2D;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    will-change: transform;
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-item p {
+    position: relative;
+    text-align: center;
+    font-family: "Epilogue", sans-serif;
+    font-size: 5vw;
+    line-height: 80%;
+    will-change: transform;
+    transition: letter-spacing 0.3s;
+}
+
+.menu-item p:hover {
+    letter-spacing: 0.075em;
+}
+
+.menu-item p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sub-nav {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5em;
+    opacity: 0;
+}
+
+.sub-nav p {
+    font-family: "Epilogue", sans-serif;
+    font-size: 20px;
+}
+
+.sub-nav p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media(max-width: 900px) {
+    .logo a {
+        font-size: 20px;
+    }
+}
+
