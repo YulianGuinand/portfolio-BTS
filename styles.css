@@ -505,6 +505,7 @@ main {
 }
 
 .nav li:first-child {
+    cursor: pointer;
     font-weight: bolder;
 }
 
