@@ -358,3 +358,38 @@ main {
     flex-direction: column;
     gap: 5px;
 }
+
+
+/* Competence Section */
+
+#competencesSection {
+    background-color: #fff;
+}
+
+.competences_container {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comptences_list {
+    width: 100%;
+    overflow: hidden;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background: #2D2D2D;
+    color: #fff;
+}
+
+.comptences_list p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 6rem;
+    align-items: center;
+    justify-content: center;
+    animation: infScroll 1.5s infinite;
+}
