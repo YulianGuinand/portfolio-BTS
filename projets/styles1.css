@@ -275,6 +275,7 @@ main {
     }
 
     .projet_content p {
+        min-width: 220px;
         line-break: normal;
     }
 }
