@@ -286,6 +286,9 @@ main {
     .projet_number {
         width: 100%;
     }
+    .projet_image > div {
+        width: 50vw;
+    }
 }
 
 @media (max-width: 800px) {
