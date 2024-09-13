@@ -188,12 +188,12 @@
                     <h1>Contact</h1>
                     <form class="contact_form" action="#">
                         <div class="contact_form_detail">
-                            <input type="text" placeholder="Nom" id="name">
+                            <input type="text" placeholder="Nom" id="name" required autocomplete="off">
                         </div>
         
-                        <input type="email" placeholder="Email" id="email" autocomplete="off">
-                        <input type="text" placeholder="Objet" id="subject" autocomplete="off">
-                        <textarea placeholder="Contenu" id="message" ></textarea>
+                        <input type="email" placeholder="Email" id="email" autocomplete="off" required>
+                        <input type="text" placeholder="Objet" id="subject" autocomplete="off" required>
+                        <textarea placeholder="Contenu" id="message" required ></textarea>
         
                         <button class="btn" type="submit">Envoyer</button>
                     </form>
