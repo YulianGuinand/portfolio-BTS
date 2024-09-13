@@ -209,6 +209,7 @@ main {
 
 .projet_container .projet_image {
     width: 100%;
+    min-width: 300px;
     height: 300px;
     background: red;
 }
@@ -260,6 +261,41 @@ main {
 
 .projet_link:hover::after {
     width: 100%;
+}
+
+@media (max-width: 1300px) {
+    #projet_section {
+        height: 100%;
+    }
+    .projet_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projet_content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .projet_title h1 {
+        font-size: 3em;
+    }
+
+    .projet_description .projet_text {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .projet_description .projet_text p{
+        min-width: 240px;
+    }
+    .projet_description {
+        gap: 1rem;
+    }
+    .projet_description .projet_nombre {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Footer */
