@@ -360,11 +360,15 @@ main {
 
 #competencesSection {
   background-color: #fff;
+  background: #2d2d2d;
+  overflow: hidden;
+  margin-top: 10rem;
 }
 
-.competences_container {
+.competences_container_one,
+.competences_container_three,
+.competences_container_two {
   width: 100%;
-  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -373,10 +377,10 @@ main {
 .comptences_list {
   width: 100%;
   overflow: hidden;
-  height: 5rem;
+  height: 10rem;
   display: flex;
   align-items: center;
-  background: #2d2d2d;
+  flex: none;
   color: #fff;
 }
 
@@ -384,10 +388,15 @@ main {
   width: 100%;
   height: 100%;
   display: flex;
+  flex: 1;
   padding: 0 6rem;
   align-items: center;
-  justify-content: center;
-  animation: infScroll 1.5s infinite;
+  font-size: 5rem;
+  transition: all 0.3s ease;
+}
+
+.comptences_list p:hover {
+  background: #414040;
 }
 
 /* Contact Section */

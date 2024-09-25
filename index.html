@@ -153,7 +153,99 @@
         </section>
 
         <section id="competencesSection">
-          <div class="competences_container">
+          <div class="competences_container_one">
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+          </div>
+          <div class="competences_container_two">
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+          </div>
+          <div class="competences_container_three">
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
             <div class="comptences_list">
               <p>NextJs</p>
               <p>ReactJs</p>
@@ -263,6 +355,47 @@
           scrub: true,
         },
       });
+
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.fromTo(
+        "#competencesSection .competences_container_one",
+        { x: "-50%" },
+        {
+          x: "-30%",
+          scrollTrigger: {
+            scrub: true,
+            start: "top bottom",
+            end: "bottom top",
+            trigger: "#competencesSection",
+          },
+        }
+      );
+      gsap.fromTo(
+        "#competencesSection .competences_container_three",
+        { x: "100%" },
+        {
+          x: "50%",
+          scrollTrigger: {
+            scrub: true,
+            start: "top bottom",
+            end: "bottom top",
+            trigger: "#competencesSection",
+          },
+        }
+      );
+      gsap.fromTo(
+        "#competencesSection .competences_container_two",
+        { x: "30%" },
+        {
+          x: "10%",
+          scrollTrigger: {
+            scrub: true,
+            start: "top bottom",
+            end: "bottom top",
+            trigger: "#competencesSection",
+          },
+        }
+      );
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
