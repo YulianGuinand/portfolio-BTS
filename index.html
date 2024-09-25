@@ -1,277 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <title>Yulian - Guinand</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="frame" id="frame">
-        <nav class="navbar">
-            <div class="info">
-                <p>Portfolio. 1</p>
-            </div>
-            <div class="logo">
-                <p><a href="#">Le Portfolio de Yulian</a></p>
-            </div>
-
-            <div class="toggle-menu">
-                <button class="burger buttonLink"></button>
-            </div>
-        </nav>
-
-        <div class="overlay">
-            <div class="overlay-menu">
-                <div class="menu-item">
-                    <p><a href="#home" class="menu-item-link buttonLink">Home</a></p>
-                </div>
-                <div class="menu-item">
-                    <p><a href="#projetGalerie" class="menu-item-link buttonLink">Galerie de Projet</a></p>
-                </div>
-                <div class="menu-item">
-                    <p><a href="#competencesSection" class="menu-item-link buttonLink">Compétences</a></p>
-                </div>
-                <div class="menu-item">
-                    <p><a href="#contact" class="menu-item-link buttonLink">Contact</a></p>
-                </div>
-            </div>
-
-            <div class="sub-nav">
-                <p><a href="#">LinkedIn</a></p>
-                <p>.</p>
-                <p><a href="#">Github</a></p>
-                <p>.</p>
-            </div>
+      <nav class="navbar">
+        <div class="info">
+          <p>Portfolio. 1</p>
+        </div>
+        <div class="logo">
+          <p><a href="#">Le Portfolio de Yulian</a></p>
         </div>
 
-        <main>
-            <section id="home">
-                <div class="home_container">
-        
-                    <div class="home_description">
-                        <h3>
-                            Etudiant | Alternant
-                        </h3>
-                        <h1>
-                            Yulian <br>Guinand
-                        </h1>
-                        <p>
-                            Je m'appelle Yulian Guinand, j'ai 19 ans, et je suis actuellement étudiant en BTS Services Informatiques aux Organisations (SIO) en alternance à Pasteur Mont Roland. Passionné par le développement web.
-                        </p>
-            
-                        <a class="btn" href="#contact">
-                            Contact
-                        </a>
-                    </div>
-                    <div class="home_image">
-                        <img src="assets/profile.jpg" alt="profileImage" />
-                    </div>
-                </div>
-            </section>
-
-            <section id="projetGalerie">
-                <div class="projetContainer" >
-                    <h1 class="projetGalerie_title">Derniers Travaux</h1>
-            
-                    <div class="projets_container">
-                        <a href="./projets/projet1.html" class="projet_container">
-                            <div class="projet_image" >
-                                <img src="./assets/Website_Car.png" alt="projet">
-                            </div>
-
-                            <div class="projet_description">
-                                    <h3>Projet Title</h3>
-                                    <p>Tags</p>
-                            </div>
-                        </a>
-
-                        <a href="./projets/projet2.html" class="projet_container">
-                            <div class="projet_image" >
-                                <img src="./assets/Website_Car.png" alt="">
-                            </div>
-            
-                            <div class="projet_description">
-                                <h3>Projet Title</h3>
-                                <p>Tags</p>
-                            </div>
-                        </a>
-        
-                        <a href="./projets/projet3.html" class="projet_container">
-                            <div class="projet_image" >
-                                <img src="./assets/Website_Car.png" alt="">
-                            </div>
-            
-                            <div class="projet_description">
-                                <h3>Projet Title</h3>
-                                <p>Tags</p>
-                            </div>
-                        </a>
-        
-                        <a href="./projets/projet4.html" class="projet_container">
-                            <div class="projet_image" >
-                                <img src="./assets/Website_Car.png" alt="">
-                            </div>
-            
-                            <div class="projet_description">
-                                <h3>Projet Title</h3>
-                                <p>Tags</p>
-                            </div>
-                        </a>
-        
-                        <a href="./projets/projet5.html" class="projet_container">
-                            <div class="projet_image" >
-                                <img src="./assets/Website_Car.png" alt="">
-                            </div>
-            
-                            <div class="projet_description">
-                                <h3>Projet Title</h3>
-                                <p>Tags</p>
-                            </div>
-                        </a>
-        
-                        <a href="./projets/projet6.html" class="projet_container">
-                            <div class="projet_image" >
-                                <img src="./assets/Website_Car.png" alt="">
-                            </div>
-            
-                            <div class="projet_description">
-                                <h3>Projet Title</h3>
-                                <p>Tags</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="competencesSection">
-                <div class="competences_container">
-                    <div class="comptences_list">
-                        <p>NextJs</p>
-                        <p>ReactJs</p>
-                        <p>Javascript</p>
-                        <p>TypeScript</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>NextJs</p>
-                        <p>ReactJs</p>
-                        <p>Javascript</p>
-                        <p>TypeScript</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>NextJs</p>
-                        <p>ReactJs</p>
-                        <p>Javascript</p>
-                        <p>TypeScript</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>NextJs</p>
-                        <p>ReactJs</p>
-                        <p>Javascript</p>
-                        <p>TypeScript</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>NextJs</p>
-                        <p>ReactJs</p>
-                        <p>Javascript</p>
-                        <p>TypeScript</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <div class="contact_container">
-                    <h1>Contact</h1>
-                    <form class="contact_form" action="#">
-                        <div class="contact_form_detail">
-                            <input type="text" placeholder="Nom" id="name" required autocomplete="off">
-                        </div>
-        
-                        <input type="email" placeholder="Email" id="email" autocomplete="off" required>
-                        <input type="text" placeholder="Objet" id="subject" autocomplete="off" required>
-                        <textarea placeholder="Contenu" id="message" required ></textarea>
-        
-                        <button class="btn" type="submit">Envoyer</button>
-                    </form>
-                </div>
-            </section>  
-        </main>
-        <div class="footer-wrapper">
-            <footer id="footer" class="footer">
-                    <div class="content__inner">
-                        <div class="nav">
-                            <div class="col">
-                                <li>
-                                    <a class="buttonLink">
-                                        Menu
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#home">
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#home">
-                                        A Propos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#projetGalerie">
-                                        Projets
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#competencesSection">
-                                        Compétences
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#contact">
-                                        Contact
-                                    </a>
-                                </li>
-                            </div>
-        
-                            <div class="col">
-                                <li>
-                                    <a target="_blank" href="https://www.linkedin.com/in/yulian-guinand/">
-                                        LinkedIn
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://github.com/YulianGuinand">
-                                        Github
-                                    </a>
-                                </li>
-                            </div>
-                        </div>
-        
-                        <div class="copyright">
-                            <span>2024. All right reserved.</span>
-                            <span>Site by <u>Yulian</u>.</span>
-                        </div>
-                    </div>
-            </footer>
+        <div class="toggle-menu">
+          <button class="burger buttonLink"></button>
         </div>
+      </nav>
+
+      <div class="overlay">
+        <div class="overlay-menu">
+          <div class="menu-item">
+            <p><a href="#home" class="menu-item-link buttonLink">Home</a></p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a href="#projetGalerie" class="menu-item-link buttonLink"
+                >Galerie de Projet</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a href="#competencesSection" class="menu-item-link buttonLink"
+                >Compétences</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a href="#contact" class="menu-item-link buttonLink">Contact</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="sub-nav">
+          <p><a href="#">LinkedIn</a></p>
+          <p>.</p>
+          <p><a href="#">Github</a></p>
+          <p>.</p>
+        </div>
+      </div>
+
+      <main>
+        <section id="home">
+          <div class="home_container">
+            <div class="home_description">
+              <h3>Etudiant | Alternant</h3>
+              <h1>Yulian <br />Guinand</h1>
+              <p>
+                Je m'appelle Yulian Guinand, j'ai 19 ans, et je suis
+                actuellement étudiant en BTS Services Informatiques aux
+                Organisations (SIO) en alternance à Pasteur Mont Roland.
+                Passionné par le développement web.
+              </p>
+
+              <a class="btn" href="#contact"> Contact </a>
+            </div>
+            <div class="home_image">
+              <img src="assets/profile.jpg" alt="profileImage" />
+            </div>
+          </div>
+        </section>
+
+        <section id="projetGalerie">
+          <div class="projetContainer">
+            <h1 class="projetGalerie_title">Derniers Travaux</h1>
+
+            <div class="projets_container">
+              <a href="./projets/projet1.html" class="projet_container">
+                <div class="projet_image">
+                  <img src="./assets/Website_Car.png" alt="projet" />
+                </div>
+
+                <div class="projet_description">
+                  <h3>Projet Title</h3>
+                  <p>Tags</p>
+                </div>
+              </a>
+
+              <a href="./projets/projet2.html" class="projet_container">
+                <div class="projet_image">
+                  <img src="./assets/Website_Car.png" alt="" />
+                </div>
+
+                <div class="projet_description">
+                  <h3>Projet Title</h3>
+                  <p>Tags</p>
+                </div>
+              </a>
+
+              <a href="./projets/projet3.html" class="projet_container">
+                <div class="projet_image">
+                  <img src="./assets/Website_Car.png" alt="" />
+                </div>
+
+                <div class="projet_description">
+                  <h3>Projet Title</h3>
+                  <p>Tags</p>
+                </div>
+              </a>
+
+              <a href="./projets/projet4.html" class="projet_container">
+                <div class="projet_image">
+                  <img src="./assets/Website_Car.png" alt="" />
+                </div>
+
+                <div class="projet_description">
+                  <h3>Projet Title</h3>
+                  <p>Tags</p>
+                </div>
+              </a>
+
+              <a href="./projets/projet5.html" class="projet_container">
+                <div class="projet_image">
+                  <img src="./assets/Website_Car.png" alt="" />
+                </div>
+
+                <div class="projet_description">
+                  <h3>Projet Title</h3>
+                  <p>Tags</p>
+                </div>
+              </a>
+
+              <a href="./projets/projet6.html" class="projet_container">
+                <div class="projet_image">
+                  <img src="./assets/Website_Car.png" alt="" />
+                </div>
+
+                <div class="projet_description">
+                  <h3>Projet Title</h3>
+                  <p>Tags</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="competencesSection">
+          <div class="competences_container">
+            <div class="comptences_list">
+              <p>NextJs</p>
+              <p>ReactJs</p>
+              <p>Javascript</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="contact_container">
+            <h1>Contact</h1>
+            <form class="contact_form" action="#">
+              <div class="contact_form_detail">
+                <input
+                  type="text"
+                  placeholder="Nom"
+                  id="name"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                autocomplete="off"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Objet"
+                id="subject"
+                autocomplete="off"
+                required
+              />
+              <textarea placeholder="Contenu" id="message" required></textarea>
+
+              <button class="btn" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <div class="footer-wrapper">
+        <footer id="footer" class="footer">
+          <div class="content__inner">
+            <div class="nav">
+              <div class="col">
+                <li>
+                  <a class="buttonLink"> Menu </a>
+                </li>
+                <li>
+                  <a href="#home"> Home </a>
+                </li>
+                <li>
+                  <a href="#home"> A Propos </a>
+                </li>
+                <li>
+                  <a href="#projetGalerie"> Projets </a>
+                </li>
+                <li>
+                  <a href="#competencesSection"> Compétences </a>
+                </li>
+                <li>
+                  <a href="#contact"> Contact </a>
+                </li>
+              </div>
+
+              <div class="col">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/yulian-guinand/"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://github.com/YulianGuinand">
+                    Github
+                  </a>
+                </li>
+              </div>
+            </div>
+
+            <div class="copyright">
+              <span>2024. All right reserved.</span>
+              <span>Site by <u>Yulian</u>.</span>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
-        gsap.from(".footer", {
-            y: -5000,
-            scrollTrigger: {
-              trigger: ".content",
-              start: "bottom bottom",
-              scrub: true,
-            },
-        })
+      gsap.from(".footer", {
+        y: -5000,
+        scrollTrigger: {
+          trigger: ".content",
+          start: "bottom bottom",
+          scrub: true,
+        },
+      });
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
@@ -279,57 +270,66 @@
 
     <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
-            const burger = document.querySelector(".burger");
-            const toggleButton = document.querySelectorAll(".buttonLink");
-            let isOpen = false;
-        
-            gsap.set(".menu-item p", { y: 225 });
+      document.addEventListener("DOMContentLoaded", function () {
+        let activeItemIndicator = CSSRulePlugin.getRule(
+          ".menu-item p#active::after"
+        );
+        const burger = document.querySelector(".burger");
+        const toggleButton = document.querySelectorAll(".buttonLink");
+        let isOpen = false;
 
-            const timeline = gsap.timeline({paused: true});
+        gsap.set(".menu-item p", { y: 225 });
 
-            timeline.to(".overlay", {
-                duration: 1.5,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                ease: "power4.out",
-            });
+        const timeline = gsap.timeline({ paused: true });
 
-            timeline.to(".menu-item p", {
-                duration: 1.5,
-                y: 0,
-                ease: "power4.out",
-                stagger: 0.2,
-            })
+        timeline.to(".overlay", {
+          duration: 1.5,
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          ease: "power4.out",
+        });
 
-            timeline.to(activeItemIndicator, {
-                width: "100%",
-                duration: 1,
-                ease: "power4.out",
-                delay: 0.5
-            }, "<");
+        timeline.to(".menu-item p", {
+          duration: 1.5,
+          y: 0,
+          ease: "power4.out",
+          stagger: 0.2,
+        });
 
-            timeline.to(".sub-nav", {
-                bottom: "10%",
-                opacity: 1,
-                duration: 0.5,
-                delay: 0.5
-            }, "<");
+        timeline.to(
+          activeItemIndicator,
+          {
+            width: "100%",
+            duration: 1,
+            ease: "power4.out",
+            delay: 0.5,
+          },
+          "<"
+        );
 
-            toggleButton.forEach((button) => {
-                button.addEventListener("click", function() {
-                    if (isOpen) {
-                        timeline.reverse();
-                        burger.classList.toggle("active")
-                    } else {
-                        burger.classList.toggle("active")
-                        timeline.play();
-                    }
-                    isOpen = !isOpen;
-                })
-            })
-        })
+        timeline.to(
+          ".sub-nav",
+          {
+            bottom: "10%",
+            opacity: 1,
+            duration: 0.5,
+            delay: 0.5,
+          },
+          "<"
+        );
+
+        toggleButton.forEach((button) => {
+          button.addEventListener("click", function () {
+            if (isOpen) {
+              timeline.reverse();
+              burger.classList.toggle("active");
+            } else {
+              burger.classList.toggle("active");
+              timeline.play();
+            }
+            isOpen = !isOpen;
+          });
+        });
+      });
     </script>
-
-</body>
+  </body>
 </html>
