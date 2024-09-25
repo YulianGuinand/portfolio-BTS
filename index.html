@@ -411,7 +411,7 @@
         const toggleButton = document.querySelectorAll(".buttonLink");
         let isOpen = false;
 
-        gsap.set(".menu-item p", { y: 225 });
+        gsap.set(".menu-item p", { y: -225 });
 
         const timeline = gsap.timeline({ paused: true });
 
@@ -422,10 +422,11 @@
         });
 
         timeline.to(".menu-item p", {
+          delay: -0.9,
           duration: 1.5,
           y: 0,
           ease: "power4.out",
-          stagger: 0.2,
+          stagger: -0.2,
         });
 
         timeline.to(
