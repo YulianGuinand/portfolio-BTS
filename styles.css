@@ -192,6 +192,7 @@ main {
 #home .home_container {
   height: 100vh;
   width: 100%;
+  max-width: 1920px;
   display: flex;
   align-items: center;
   justify-content: space-around;
