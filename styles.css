@@ -538,3 +538,32 @@ main {
   font-size: 0.8em;
   margin: 6em 0 0 0;
 }
+
+.loader-screen.activate {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #2d2d2d;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-screen.activate .loader-wrapper {
+  width: 500px;
+  height: 4rem;
+  position: relative;
+  background: #ebebeb;
+}
+
+.loader-screen.activate .loader-wrapper > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
