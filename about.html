@@ -67,7 +67,18 @@
         </div>
       </div>
 
-      <main></main>
+      <main>
+        <section class="s-about">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="panel red"></div>
+              <div class="panel purple"></div>
+              <div class="panel blue"></div>
+              <div class="panel orange"></div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <div class="footer-wrapper">
         <footer id="footer" class="footer">
@@ -122,14 +133,47 @@
 
     <script>
       gsap.from(".footer", {
-        y: -200,
+        y: -500,
         scrollTrigger: {
           trigger: ".content",
           start: "bottom bottom",
           scrub: true,
         },
       });
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.set(".panel", {
+        zIndex: (i, target, targets) => targets.length - i,
+      });
+
+      var images = gsap.utils.toArray(".panel:not(.orange)");
+
+      images.forEach((image, i) => {
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "section.s-about",
+            start: () => "top -" + window.innerHeight * (i + 0.5),
+            end: () => "+=" + window.innerHeight,
+            scrub: true,
+            toggleActions: "play none reverse none",
+            invalidateOnRefresh: true,
+          },
+        });
+
+        tl.to(image, { height: 0 });
+      });
+
+      ScrollTrigger.create({
+        trigger: "section.s-about",
+        scrub: true,
+        pin: true,
+        start: () => "top top",
+        end: () => "+=" + (images.length + 1) * window.innerHeight,
+        invalidateOnRefresh: true,
+      });
     </script>
+
+    <script></script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="../index.js"></script>

@@ -185,6 +185,86 @@ main {
 
 /* PROJET SECTION */
 
+.s-about {
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-about .slider-wrapper {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+}
+
+.s-about .slider-wrapper .slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.s-about .slider-wrapper::before {
+  content: "SALUT,";
+  position: absolute;
+  top: 0;
+  transform: translateY(-35%);
+  left: 1rem;
+  font-size: 3rem;
+  z-index: 99;
+}
+
+.s-about .slider-wrapper::after {
+  content: "JE SUIS YULIAN";
+  position: absolute;
+  bottom: 0;
+  transform: translateY(55%);
+  right: 1rem;
+  font-size: 3rem;
+  z-index: 99;
+}
+
+@media (max-width: 450px) {
+  .s-about .slider-wrapper::before,
+  .s-about .slider-wrapper::after {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 450px) {
+}
+@media (min-width: 775px) {
+  .s-about .slider-wrapper::before,
+  .s-about .slider-wrapper::after {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1500px) {
+  .s-about .slider-wrapper::before,
+  .s-about .slider-wrapper::after {
+    font-size: 8rem;
+  }
+}
+.panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.red {
+  background: red;
+}
+.purple {
+  background: purple;
+}
+.blue {
+  background-color: blue;
+}
+.orange {
+  background: orange;
+}
+
 /* Footer */
 
 .footer-wrapper {
