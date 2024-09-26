@@ -10,6 +10,17 @@
   </head>
   <body>
     <div class="frame" id="frame">
+
+      <div class="loader">
+        <h2 class="counter">0</h2>
+  
+        <div class="circles">
+          <div class="circle circle-outer"></div>
+          <div class="circle-inner-rotator"></div>
+          <div class="circle-content"></div>
+        </div>
+      </div>
+
       <nav class="navbar">
         <div class="info">
           <p>Portfolio. 1</p>
@@ -304,6 +315,7 @@
           </div>
         </section>
       </main>
+
       <div class="footer-wrapper">
         <footer id="footer" class="footer">
           <div class="content__inner">
@@ -354,18 +366,97 @@
         </footer>
       </div>
     </div>
-    <div class="loader-screen activate">
-      <div class="loader-wrapper">
-        <div class="loader-1"></div>
-        <div class="loader-2"></div>
-        <div class="loader-3"></div>
-      </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
+
+      function startLoader() {
+        let counterElement = document.querySelector(".counter");
+        let currentValue = 0;
+
+        function updateCounter() {
+          if(currentValue === 100) {
+            return;
+          };
+
+          currentValue += Math.floor(Math.random() *10) +1;
+  
+          if(currentValue > 100) {
+            currentValue = 100;
+          }
+  
+          counterElement.textContent = currentValue + "%";
+  
+          let delay = Math.floor(Math.random() * 200) + 250;
+          setTimeout(updateCounter, delay)
+        }
+
+        updateCounter();
+      }
+
+      startLoader();
+
+      gsap.from(".circles", 2, {
+        top: "-100%",
+        ease: "elastic.out",
+        delay: 0.5,
+      })
+
+      gsap.to(".circle-inner-rotator", 1, {
+        width: "50%",
+        height: "40%",
+        ease: "power4.inOut",
+        delay: 1.5,
+      })
+      gsap.to(".circle-inner-rotator", 1, {
+        left: "0%",
+        transform: "translateX(0)",
+        ease: "power4.inOut",
+        delay: 2.5,
+      })
+      gsap.to(".circle-inner-rotator", 1, {
+        bottom: 0,
+        ease: "power4.inOut",
+        delay: 3.5,
+      })
+      gsap.to(".circle-inner-rotator", 1, {
+        transform: "translateX(-100%)",
+        left: "calc(100%)",
+        ease: "power4.inOut",
+        delay: 4.5,
+      })
+      gsap.to(".circle-inner-rotator", 1, {
+        top: "0",
+        ease: "power4.inOut",
+        delay: 5.5,
+      })
+      gsap.to(".circle-inner-rotator", 1, {
+        transform: "translateX(-50%)",
+        top: "0",
+        left: "50%",
+        ease: "power4.inOut",
+        delay: 6.5,
+      })
+      gsap.to(".circle-content", 1, {
+        height: "100%",
+        ease: "power4.inOut",
+        delay: 7,
+      })
+
+      gsap.to(".loader" , {
+        top: "-100%",
+        ease: "power4.inOut",
+        duration: 3,
+        delay: 7.5,
+      })
+      gsap.to(".loader" , {
+        display: "none",
+        duration: 0.1,
+        delay: 13,
+      })
+
       gsap.from(".footer", {
         y: -5000,
         scrollTrigger: {
@@ -415,91 +506,6 @@
                 },
             }
       );
-      
-      gsap.from(".loader-1", {
-        width: 0,
-        duration: 6,
-        ease: "power2.inOut",
-      });
-      gsap.from(".loader-2", {
-        width: 0,
-        duration: 6,
-        ease: "power2.inOut",
-      });
-      gsap.from(".loader-3", {
-        width: 0,
-        duration: 6,
-        ease: "power2.inOut",
-      });
-
-      gsap.to(".loader-wrapper", {
-        background: "none",
-        delay: 6,
-        duration: 0.1,
-      });
-
-      gsap.to(".loader-1", {
-        rotate: -90,
-        y: -50,
-        duration: 1,
-        delay: 6,
-      });
-      gsap.to(".loader-2", {
-        rotate: -90,
-        y: -50,
-        duration: 1,
-        delay: 6,
-      });
-      gsap.to(".loader-3", {
-        rotate: -90,
-        y: -50,
-        duration: 1,
-        delay: 6,
-      });
-
-      gsap.to(".loader-2", {
-        width: "50%",
-        x: 125,
-        y: -175,
-        duration: 0.1,
-        delay: 7,
-      });
-      gsap.to(".loader-2", {
-        width: "50%",
-        y: -175,
-        x: 125,
-        duration: 0.1,
-        delay: 7,
-      });
-      gsap.to(".loader-2", {
-        rotate: -135,
-        duration: 1,
-        delay: 8,
-        x: 27,
-        y: -177,
-      });
-      gsap.to(".loader-3", {
-        width: "50%",
-        y: -175,
-        x: 125,
-        duration: 0.1,
-        delay: 7,
-      });
-      gsap.to(".loader-3", {
-        rotate: -45,
-        duration: 1,
-        delay: 8,
-        x: 222,
-        y: -177,
-      });
-
-      gsap.to(".loader-1", {
-        width: "50%",
-        x: 125,
-        y: 0,
-        duration: 1,
-        delay: 8,
-      });
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
