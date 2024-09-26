@@ -83,14 +83,20 @@
           <div class="container">
             <div class="wrapper">
               <p class="white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis consectetur voluptatem quae ea similique adipisci
-                reprehenderit vero voluptatum, debitis exercitationem nisi ad
-                mollitia? Molestias veniam sint quisquam ea et dolorum nesciunt
-                rem saepe id, amet vero, necessitatibus esse reiciendis
-                molestiae.
+                "Carpe diem, quam minimum credula postero" est un célèbre vers
+                latin tiré d'un poème d'Horace, signifiant : « Cueille l’instant
+                présent sans te préoccuper de ce que le lendemain te réserve. »
+                Une invitation à savourer chaque jour comme un trésor
+                inestimable, à vivre pleinement l'instant, libéré des
+                incertitudes du futur.
               </p>
             </div>
+          </div>
+          <div class="image_container">
+            <img
+              src="https://lh3.googleusercontent.com/proxy/1UMQrmgW2VGud5FxBWeySALduIKLdNpTXlR1mctptN1wuIY_dTHC7qMgDbRTQEvlzsrfvM7QhM7kwQOk67LbNx65oiP7z5HSU_TTsIX-m0fOKg"
+              alt="imageHorace"
+            />
           </div>
         </section>
       </main>
@@ -149,7 +155,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
-    <script></script>
+
     <script>
       gsap.from(".footer", {
         y: -500,
@@ -196,6 +202,8 @@
         wordsClass: "word",
       });
 
+      const scrollBar = document.querySelector(".scrollBar");
+
       const tl = gsap
         .timeline({
           scrollTrigger: {
@@ -213,9 +221,11 @@
             stagger: 0.1,
           },
           0.1
-        );
+        )
+        .set(scrollBar, {
+          innerHeight: "+50%",
+        });
     </script>
-    <script></script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="../index.js"></script>
