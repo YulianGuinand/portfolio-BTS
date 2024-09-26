@@ -354,6 +354,13 @@
         </footer>
       </div>
     </div>
+    <div class="loader-screen activate">
+      <div class="loader-wrapper">
+        <div class="loader-1"></div>
+        <div class="loader-2"></div>
+        <div class="loader-3"></div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -407,8 +414,92 @@
                   trigger: "#competencesSection",
                 },
             }
-        );
+      );
       
+      gsap.from(".loader-1", {
+        width: 0,
+        duration: 6,
+        ease: "power2.inOut",
+      });
+      gsap.from(".loader-2", {
+        width: 0,
+        duration: 6,
+        ease: "power2.inOut",
+      });
+      gsap.from(".loader-3", {
+        width: 0,
+        duration: 6,
+        ease: "power2.inOut",
+      });
+
+      gsap.to(".loader-wrapper", {
+        background: "none",
+        delay: 6,
+        duration: 0.1,
+      });
+
+      gsap.to(".loader-1", {
+        rotate: -90,
+        y: -50,
+        duration: 1,
+        delay: 6,
+      });
+      gsap.to(".loader-2", {
+        rotate: -90,
+        y: -50,
+        duration: 1,
+        delay: 6,
+      });
+      gsap.to(".loader-3", {
+        rotate: -90,
+        y: -50,
+        duration: 1,
+        delay: 6,
+      });
+
+      gsap.to(".loader-2", {
+        width: "50%",
+        x: 125,
+        y: -175,
+        duration: 0.1,
+        delay: 7,
+      });
+      gsap.to(".loader-2", {
+        width: "50%",
+        y: -175,
+        x: 125,
+        duration: 0.1,
+        delay: 7,
+      });
+      gsap.to(".loader-2", {
+        rotate: -135,
+        duration: 1,
+        delay: 8,
+        x: 27,
+        y: -177,
+      });
+      gsap.to(".loader-3", {
+        width: "50%",
+        y: -175,
+        x: 125,
+        duration: 0.1,
+        delay: 7,
+      });
+      gsap.to(".loader-3", {
+        rotate: -45,
+        duration: 1,
+        delay: 8,
+        x: 222,
+        y: -177,
+      });
+
+      gsap.to(".loader-1", {
+        width: "50%",
+        x: 125,
+        y: 0,
+        duration: 1,
+        delay: 8,
+      });
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
