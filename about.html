@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesAbout.css" />
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <title>A Propos</title>
+  </head>
+  <body data-scroll-container>
+    <div class="frame" id="frame">
+      <nav class="navbar">
+        <div class="info">
+          <p>Portfolio. 1</p>
+        </div>
+        <div class="logo">
+          <p><a href="../index.html">Le Portfolio de Yulian</a></p>
+        </div>
+
+        <div class="toggle-menu">
+          <button class="burger buttonLink"></button>
+        </div>
+      </nav>
+
+      <div class="overlay">
+        <div class="overlay-menu">
+          <div class="menu-item">
+            <p>
+              <a href="/index.html#home" class="menu-item-link buttonLink"
+                >Home</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a
+                href="/index.html#projetGalerie"
+                class="menu-item-link buttonLink"
+                >Galerie de Projet</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a
+                href="/index.html#competencesSection"
+                class="menu-item-link buttonLink"
+                >Compétences</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a href="/index.html#contact" class="menu-item-link buttonLink"
+                >Contact</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="sub-nav">
+          <p><a href="#">LinkedIn</a></p>
+          <p>.</p>
+          <p><a href="#">Github</a></p>
+          <p>.</p>
+        </div>
+      </div>
+
+      <main>
+        <section class="s-about">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="panel red"></div>
+              <div class="panel purple"></div>
+              <div class="panel blue"></div>
+              <div class="panel orange"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="textSection">
+          <div class="container">
+            <div class="wrapper">
+              <p class="white">
+                "Carpe diem, quam minimum credula postero" est un célèbre vers
+                latin tiré d'un poème d'Horace, signifiant : « Cueille l’instant
+                présent sans te préoccuper de ce que le lendemain te réserve. »
+                Une invitation à savourer chaque jour comme un trésor
+                inestimable, à vivre pleinement l'instant, libéré des
+                incertitudes du futur.
+              </p>
+            </div>
+          </div>
+          <div class="image_container">
+            <img
+              src="https://lh3.googleusercontent.com/proxy/1UMQrmgW2VGud5FxBWeySALduIKLdNpTXlR1mctptN1wuIY_dTHC7qMgDbRTQEvlzsrfvM7QhM7kwQOk67LbNx65oiP7z5HSU_TTsIX-m0fOKg"
+              alt="imageHorace"
+            />
+          </div>
+        </section>
+      </main>
+
+      <div class="footer-wrapper">
+        <footer id="footer" class="footer">
+          <div class="content__inner">
+            <div class="nav">
+              <div class="col">
+                <li>
+                  <a class="buttonLink"> Menu </a>
+                </li>
+                <li>
+                  <a href="/index.html#home"> Home </a>
+                </li>
+                <li>
+                  <a href="/index.html#home"> A Propos </a>
+                </li>
+                <li>
+                  <a href="/index.html#projetGalerie"> Projets </a>
+                </li>
+                <li>
+                  <a href="/index.html#competencesSection"> Compétences </a>
+                </li>
+                <li>
+                  <a href="/index.html#contact"> Contact </a>
+                </li>
+              </div>
+
+              <div class="col">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/yulian-guinand/"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://github.com/YulianGuinand">
+                    Github
+                  </a>
+                </li>
+              </div>
+            </div>
+
+            <div class="copyright">
+              <span>2024. All right reserved.</span>
+              <span>Site by <u>Yulian</u>.</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+
+    <script>
+      gsap.from(".footer", {
+        y: -500,
+        scrollTrigger: {
+          trigger: ".content",
+          start: "bottom bottom",
+          scrub: true,
+        },
+      });
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.set(".panel", {
+        zIndex: (i, target, targets) => targets.length - i,
+      });
+
+      var images = gsap.utils.toArray(".panel:not(.orange)");
+
+      images.forEach((image, i) => {
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "section.s-about",
+            start: () => "top -" + window.innerHeight * (i + 0.5),
+            end: () => "+=" + window.innerHeight,
+            scrub: true,
+            toggleActions: "play none reverse none",
+            invalidateOnRefresh: true,
+          },
+        });
+
+        tl.to(image, { height: 0 });
+      });
+
+      ScrollTrigger.create({
+        trigger: "section.s-about",
+        scrub: true,
+        pin: true,
+        start: "top top",
+        end: () => "+=" + (images.length + 1) * window.innerHeight,
+        invalidateOnRefresh: true,
+      });
+
+      const split = new SplitText(".wrapper p", {
+        type: "words",
+        wordsClass: "word",
+      });
+
+      const scrollBar = document.querySelector(".scrollBar");
+
+      const tl = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#textSection",
+            start: "top top",
+            end: "+=150%",
+            scrub: true,
+            pin: true,
+          },
+        })
+        .set(
+          split.words,
+          {
+            opacity: 1,
+            stagger: 0.1,
+          },
+          0.1
+        )
+        .set(scrollBar, {
+          innerHeight: "+50%",
+        });
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="../index.js"></script>
+
+    <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let activeItemIndicator = CSSRulePlugin.getRule(
+          ".menu-item p#active::after"
+        );
+        const burger = document.querySelector(".burger");
+        const toggleButton = document.querySelectorAll(".buttonLink");
+        let isOpen = false;
+
+        gsap.set(".menu-item p", { y: 225 });
+
+        const timeline = gsap.timeline({ paused: true });
+
+        timeline.to(".overlay", {
+          duration: 1.5,
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          ease: "power4.out",
+        });
+
+        timeline.to(".menu-item p", {
+          duration: 1.5,
+          y: 0,
+          ease: "power4.out",
+          stagger: 0.2,
+        });
+
+        timeline.to(
+          activeItemIndicator,
+          {
+            width: "100%",
+            duration: 1,
+            ease: "power4.out",
+            delay: 0.5,
+          },
+          "<"
+        );
+
+        timeline.to(
+          ".sub-nav",
+          {
+            bottom: "10%",
+            opacity: 1,
+            duration: 0.5,
+            delay: 0.5,
+          },
+          "<"
+        );
+
+        toggleButton.forEach((button) => {
+          button.addEventListener("click", function () {
+            if (isOpen) {
+              timeline.reverse();
+              burger.classList.toggle("active");
+            } else {
+              burger.classList.toggle("active");
+              timeline.play();
+            }
+            isOpen = !isOpen;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
