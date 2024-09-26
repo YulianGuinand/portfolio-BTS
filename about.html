@@ -78,6 +78,21 @@
             </div>
           </div>
         </section>
+
+        <section id="textSection">
+          <div class="container">
+            <div class="wrapper">
+              <p class="white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis consectetur voluptatem quae ea similique adipisci
+                reprehenderit vero voluptatum, debitis exercitationem nisi ad
+                mollitia? Molestias veniam sint quisquam ea et dolorum nesciunt
+                rem saepe id, amet vero, necessitatibus esse reiciendis
+                molestiae.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
 
       <div class="footer-wrapper">
@@ -131,6 +146,10 @@
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <script></script>
     <script>
       gsap.from(".footer", {
         y: -500,
@@ -167,12 +186,35 @@
         trigger: "section.s-about",
         scrub: true,
         pin: true,
-        start: () => "top top",
+        start: "top top",
         end: () => "+=" + (images.length + 1) * window.innerHeight,
         invalidateOnRefresh: true,
       });
-    </script>
 
+      const split = new SplitText(".wrapper p", {
+        type: "words",
+        wordsClass: "word",
+      });
+
+      const tl = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#textSection",
+            start: "top top",
+            end: "+=150%",
+            scrub: true,
+            pin: true,
+          },
+        })
+        .set(
+          split.words,
+          {
+            opacity: 1,
+            stagger: 0.1,
+          },
+          0.1
+        );
+    </script>
     <script></script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
