@@ -1,198 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles4.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles4.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <title>Projet 4</title>
-</head>
-<body data-scroll-container>
+  </head>
+  <body data-scroll-container>
     <div class="frame" id="frame">
-
-        <nav class="navbar">
-            <div class="info">
-                <p>Portfolio. 1</p>
-            </div>
-            <div class="logo">
-                <p><a href="../index.html">Le Portfolio de Yulian</a></p>
-            </div>
-
-            <div class="toggle-menu">
-                <button class="burger buttonLink"></button>
-            </div>
-        </nav>
-
-        <div class="overlay">
-            <div class="overlay-menu">
-                <div class="menu-item">
-                    <p><a href="/index.html#home" class="menu-item-link buttonLink">Home</a></p>
-                </div>
-                <div class="menu-item">
-                    <p><a href="/index.html#projetGalerie" class="menu-item-link buttonLink">Galerie de Projet</a></p>
-                </div>
-                <div class="menu-item">
-                    <p><a href="/index.html#competencesSection" class="menu-item-link buttonLink">Compétences</a></p>
-                </div>
-                <div class="menu-item">
-                    <p><a href="/index.html#contact" class="menu-item-link buttonLink">Contact</a></p>
-                </div>
-            </div>
-
-            <div class="sub-nav">
-                <p><a href="#">LinkedIn</a></p>
-                <p>.</p>
-                <p><a href="#">Github</a></p>
-                <p>.</p>
-            </div>
+      <nav class="navbar">
+        <div class="info">
+          <p>Portfolio. 1</p>
+        </div>
+        <div class="logo">
+          <p><a href="../index.html">Le Portfolio de Yulian</a></p>
         </div>
 
-        <main>
-            <section id="projet_section">
-                <div class="projet_container">
-                    <div class="projet_content">
-                        <div class="projet_title">
-                            <h1>projet<br>name</h1>
-                        </div>
-                        <div class="projet_image">
-
-                        </div>
-                    </div>
-
-                    <div class="projet_description">
-                        <div class="projet_text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sapiente, assumenda similique ratione optio commodi ad quaerat! Sequi quidem quaerat magnam, ipsam nostrum a, enim, repellendus cumque quod impedit illo animi. Obcaecati est vero eum omnis commodi assumenda magni, cumque eveniet voluptatibus facilis laudantium, cupiditate quos ipsa ducimus, sunt porro.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nihil non consequatur voluptatum est iure corrupti porro delectus soluta earum! <br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint architecto minima modi minus mollitia dolor facilis est, provident deleniti laboriosam soluta magnam odio reiciendis, ducimus aperiam voluptatibus fugiat a? Eius deserunt nobis aspernatur nostrum obcaecati tempore assumenda consectetur magnam! Modi!</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, obcaecati fugiat quae libero veritatis facilis consectetur illum unde. Libero quisquam suscipit voluptates reiciendis, modi corporis minima nulla est.</p>
-                        </div>
-                        <div class="projet_nombre">
-                            <h1>4.</h1>
-                            <div class="projet_links">
-                                <a href="/projets/projet3.html" class="projet_link">précédent</a>
-                                <a href="#" class="projet_link">suivant</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <div class="footer-wrapper">
-            <footer id="footer" class="footer">
-                    <div class="content__inner">
-                        <div class="nav">
-                            <div class="col">
-                                <li>
-                                    <a class="buttonLink">
-                                        Menu
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/index.html#home">
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/index.html#home">
-                                        A Propos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/index.html#projetGalerie">
-                                        Projets
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/index.html#competencesSection">
-                                        Compétences
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/index.html#contact">
-                                        Contact
-                                    </a>
-                                </li>
-                            </div>
-        
-                            <div class="col">
-                                <li>
-                                    <a target="_blank" href="https://www.linkedin.com/in/yulian-guinand/">
-                                        LinkedIn
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://github.com/YulianGuinand">
-                                        Github
-                                    </a>
-                                </li>
-                            </div>
-                        </div>
-        
-                        <div class="copyright">
-                            <span>2024. All right reserved.</span>
-                            <span>Site by <u>Yulian</u>.</span>
-                        </div>
-                    </div>
-            </footer>
+        <div class="toggle-menu">
+          <button class="burger buttonLink"></button>
         </div>
+      </nav>
+
+      <div class="overlay">
+        <div class="overlay-menu">
+          <div class="menu-item">
+            <p>
+              <a href="/index.html#home" class="menu-item-link buttonLink"
+                >Home</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a
+                href="/index.html#projetGalerie"
+                class="menu-item-link buttonLink"
+                >Galerie de Projet</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a
+                href="/index.html#competencesSection"
+                class="menu-item-link buttonLink"
+                >Compétences</a
+              >
+            </p>
+          </div>
+          <div class="menu-item">
+            <p>
+              <a href="/index.html#contact" class="menu-item-link buttonLink"
+                >Contact</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="sub-nav">
+          <p><a href="#">LinkedIn</a></p>
+          <p>.</p>
+          <p><a href="#">Github</a></p>
+          <p>.</p>
+        </div>
+      </div>
+
+      <main>
+        <section id="projet_section">
+          <div class="projet_container">
+            <div class="projet_content">
+              <div class="projet_title">
+                <h1>projet<br />name</h1>
+              </div>
+              <div class="projet_image"></div>
+            </div>
+
+            <div class="projet_description">
+              <div class="projet_text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  sapiente, assumenda similique ratione optio commodi ad
+                  quaerat! Sequi quidem quaerat magnam, ipsam nostrum a, enim,
+                  repellendus cumque quod impedit illo animi. Obcaecati est vero
+                  eum omnis commodi assumenda magni, cumque eveniet voluptatibus
+                  facilis laudantium, cupiditate quos ipsa ducimus, sunt porro.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officiis nihil non consequatur voluptatum est iure corrupti
+                  porro delectus soluta earum! <br /><br />Lorem, ipsum dolor
+                  sit amet consectetur adipisicing elit. Sint architecto minima
+                  modi minus mollitia dolor facilis est, provident deleniti
+                  laboriosam soluta magnam odio reiciendis, ducimus aperiam
+                  voluptatibus fugiat a? Eius deserunt nobis aspernatur nostrum
+                  obcaecati tempore assumenda consectetur magnam! Modi!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eaque, obcaecati fugiat quae libero veritatis facilis
+                  consectetur illum unde. Libero quisquam suscipit voluptates
+                  reiciendis, modi corporis minima nulla est.
+                </p>
+              </div>
+              <div class="projet_nombre">
+                <h1>4.</h1>
+                <div class="projet_links">
+                  <a href="/projets/projet3.html" class="projet_link"
+                    >précédent</a
+                  >
+                  <a href="#" class="projet_link">suivant</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="footer-wrapper">
+        <footer id="footer" class="footer">
+          <div class="content__inner">
+            <div class="nav">
+              <div class="col">
+                <li>
+                  <a class="buttonLink"> Menu </a>
+                </li>
+                <li>
+                  <a href="/index.html#home"> Home </a>
+                </li>
+                <li>
+                  <a href="/index.html#home"> A Propos </a>
+                </li>
+                <li>
+                  <a href="/index.html#projetGalerie"> Projets </a>
+                </li>
+                <li>
+                  <a href="/index.html#competencesSection"> Compétences </a>
+                </li>
+                <li>
+                  <a href="/index.html#contact"> Contact </a>
+                </li>
+              </div>
+
+              <div class="col">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/yulian-guinand/"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://github.com/YulianGuinand">
+                    Github
+                  </a>
+                </li>
+              </div>
+            </div>
+
+            <div class="copyright">
+              <span>2024. All right reserved.</span>
+              <span>Site by <u>Yulian</u>.</span>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
+
+    <script>
+      gsap.from(".footer", {
+        y: -200,
+        scrollTrigger: {
+          trigger: ".content",
+          start: "bottom bottom",
+          scrub: true,
+        },
+      });
+    </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="../index.js"></script>
 
     <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
-            const burger = document.querySelector(".burger");
-            const toggleButton = document.querySelectorAll(".buttonLink");
-            let isOpen = false;
-        
-            gsap.set(".menu-item p", { y: 225 });
+      document.addEventListener("DOMContentLoaded", function () {
+        let activeItemIndicator = CSSRulePlugin.getRule(
+          ".menu-item p#active::after"
+        );
+        const burger = document.querySelector(".burger");
+        const toggleButton = document.querySelectorAll(".buttonLink");
+        let isOpen = false;
 
-            const timeline = gsap.timeline({paused: true});
+        gsap.set(".menu-item p", { y: 225 });
 
-            timeline.to(".overlay", {
-                duration: 1.5,
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                ease: "power4.out",
-            });
+        const timeline = gsap.timeline({ paused: true });
 
-            timeline.to(".menu-item p", {
-                duration: 1.5,
-                y: 0,
-                ease: "power4.out",
-                stagger: 0.2,
-            })
+        timeline.to(".overlay", {
+          duration: 1.5,
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          ease: "power4.out",
+        });
 
-            timeline.to(activeItemIndicator, {
-                width: "100%",
-                duration: 1,
-                ease: "power4.out",
-                delay: 0.5
-            }, "<");
+        timeline.to(".menu-item p", {
+          duration: 1.5,
+          y: 0,
+          ease: "power4.out",
+          stagger: 0.2,
+        });
 
-            timeline.to(".sub-nav", {
-                bottom: "10%",
-                opacity: 1,
-                duration: 0.5,
-                delay: 0.5
-            }, "<");
+        timeline.to(
+          activeItemIndicator,
+          {
+            width: "100%",
+            duration: 1,
+            ease: "power4.out",
+            delay: 0.5,
+          },
+          "<"
+        );
 
-            toggleButton.forEach((button) => {
-                button.addEventListener("click", function() {
-                    if (isOpen) {
-                        timeline.reverse();
-                        burger.classList.toggle("active")
-                    } else {
-                        burger.classList.toggle("active")
-                        timeline.play();
-                    }
-                    isOpen = !isOpen;
-                })
-            })
-        })
+        timeline.to(
+          ".sub-nav",
+          {
+            bottom: "10%",
+            opacity: 1,
+            duration: 0.5,
+            delay: 0.5,
+          },
+          "<"
+        );
+
+        toggleButton.forEach((button) => {
+          button.addEventListener("click", function () {
+            if (isOpen) {
+              timeline.reverse();
+              burger.classList.toggle("active");
+            } else {
+              burger.classList.toggle("active");
+              timeline.play();
+            }
+            isOpen = !isOpen;
+          });
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
