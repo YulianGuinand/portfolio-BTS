@@ -161,74 +161,110 @@
               <p>TypeScript</p>
               <p>HTML</p>
               <p>CSS</p>
-            </div>
-            <div class="comptences_list">
-              <p>CSS</p>
               <p>VueJs</p>
               <p>NuxtJs</p>
               <p>AstroJs</p>
               <p>Figma</p>
-              <p>NextJs</p>
             </div>
             <div class="comptences_list">
-              <p>ReactJs</p>
-              <p>Javascript</p>
-              <p>TypeScript</p>
               <p>NextJs</p>
+              <p>NuxtJs</p>
+              <p>TypeScript</p>
               <p>HTML</p>
+              <p>Javascript</p>
+              <p>VueJs</p>
+              <p>AstroJs</p>
+              <p>ReactJs</p>
               <p>CSS</p>
-            </div>
+              <p>Figma</p>
+          </div>
+          <div class="comptences_list">
+            <p>ReactJs</p>
+            <p>Figma</p>
+            <p>Javascript</p>
+            <p>TypeScript</p>
+            <p>HTML</p>
+            <p>AstroJs</p>
+            <p>CSS</p>
+            <p>NextJs</p>
+            <p>VueJs</p>
+            <p>NuxtJs</p>
+        </div>
+        <div class="comptences_list">
+          <p>NextJs</p>
+          <p>CSS</p>
+          <p>ReactJs</p>
+          <p>Javascript</p>
+          <p>AstroJs</p>
+          <p>HTML</p>
+          <p>VueJs</p>
+          <p>NuxtJs</p>
+          <p>TypeScript</p>
+          <p>Figma</p>
+      </div>
           </div>
           <div class="competences_container_two">
             <div class="comptences_list">
-              <p>CSS</p>
-              <p>VueJs</p>
-              <p>NextJs</p>
-              <p>NuxtJs</p>
+              <p>HTML</p>
               <p>AstroJs</p>
               <p>Figma</p>
-            </div>
-            <div class="comptences_list">
-              <p>NextJs</p>
-              <p>ReactJs</p>
               <p>Javascript</p>
-              <p>TypeScript</p>
-              <p>HTML</p>
               <p>CSS</p>
-            </div>
-            <div class="comptences_list">
-              <p>ReactJs</p>
-              <p>Javascript</p>
               <p>TypeScript</p>
               <p>NextJs</p>
-              <p>HTML</p>
-              <p>CSS</p>
+              <p>VueJs</p>
+              <p>NuxtJs</p>
+              <p>ReactJs</p>
             </div>
+            <div class="comptences_list">
+              <p>ReactJs</p>
+              <p>AstroJs</p>
+              <p>Javascript</p>
+              <p>CSS</p>
+              <p>TypeScript</p>
+              <p>HTML</p>
+              <p>VueJs</p>
+              <p>Figma</p>
+              <p>NextJs</p>
+              <p>NuxtJs</p>
+          </div>
+          <div class="comptences_list">
+            <p>VueJs</p>
+            <p>NextJs</p>
+            <p>NuxtJs</p>
+            <p>TypeScript</p>
+            <p>ReactJs</p>
+            <p>Javascript</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>AstroJs</p>
+            <p>Figma</p>
+        </div>
           </div>
           <div class="competences_container_three">
             <div class="comptences_list">
-              <p>NextJs</p>
-              <p>ReactJs</p>
-              <p>Javascript</p>
-              <p>TypeScript</p>
-              <p>HTML</p>
-              <p>CSS</p>
+                <p>NextJs</p>
+                <p>ReactJs</p>
+                <p>Javascript</p>
+                <p>TypeScript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>VueJs</p>
+                <p>NuxtJs</p>
+                <p>AstroJs</p>
+                <p>Figma</p>
             </div>
             <div class="comptences_list">
-              <p>ReactJs</p>
-              <p>CSS</p>
-              <p>NextJs</p>
-              <p>TypeScript</p>
-              <p>HTML</p>
-              <p>Javascript</p>
-            </div>
-            <div class="comptences_list">
-              <p>CSS</p>
-              <p>VueJs</p>
-              <p>NuxtJs</p>
-              <p>AstroJs</p>
-              <p>Figma</p>
-              <p>NextJs</p>
+                <p>NextJs</p>
+                <p>ReactJs</p>
+                <p>Javascript</p>
+                <p>TypeScript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>VueJs</p>
+                <p>NuxtJs</p>
+                <p>AstroJs</p>
+                <p>Figma</p>
             </div>
           </div>
         </section>
@@ -330,10 +366,6 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
-      function getRandomArbitrary(min, max, symbol = 1) {
-        return Math.random() * (max - min) + min * symbol;
-      }
-
       gsap.from(".footer", {
         y: -5000,
         scrollTrigger: {
@@ -346,9 +378,9 @@
       gsap.registerPlugin(ScrollTrigger);
       gsap.fromTo(
         "#competencesSection .competences_container_one",
-        { x: `${getRandomArbitrary(30, 70, -1)}%` },
+        { x: "-150%"},
         {
-          x: `${getRandomArbitrary(0, 50, -1)}%`,
+          x: "-100%",
           scrollTrigger: {
             scrub: true,
             start: "top bottom",
@@ -358,32 +390,32 @@
         }
       );
       gsap.fromTo(
-        "#competencesSection .competences_container_three",
-        { x: `${getRandomArbitrary(80, 120, 1)}%` },
-        {
-          x: `${getRandomArbitrary(35, 70, 1)}%`,
-          scrollTrigger: {
-            scrub: true,
-            start: "top bottom",
-            end: "bottom top",
-            trigger: "#competencesSection",
-          },
-        }
+          "#competencesSection .competences_container_three",
+          { x: "-50%" },
+          {
+            x: "50%",
+            scrollTrigger: {
+              scrub: true,
+              start: "top bottom",
+              end: "bottom top",
+              trigger: "#competencesSection",
+            },
+          }
       );
       gsap.fromTo(
-        "#competencesSection .competences_container_two",
-        { x: `${getRandomArbitrary(0, 50, 1)}%` },
-        {
-          x: `${getRandomArbitrary(-10, 30, -1)}%`,
-          scrollTrigger: {
-            scrub: true,
-            start: "top bottom",
-            end: "bottom top",
-            trigger: "#competencesSection",
-          },
-        }
+          "#competencesSection .competences_container_two",
+          { x: "0" },
+          {
+              x: "-90%",
+              scrollTrigger: {
+                  scrub: true,
+                  start: "top bottom",
+                  end: "bottom top",
+                  trigger: "#competencesSection",
+                },
+            }
       );
-
+      
       gsap.from(".loader-1", {
         width: 0,
         duration: 6,
