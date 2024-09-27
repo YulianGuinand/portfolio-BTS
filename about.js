@@ -57,11 +57,6 @@ images.forEach((image, i) => {
   tl.to(image, { height: 0 });
 });
 
-function isMobile() {
-  const minWidth = 768; // Minimum width for desktop devices
-  return window.innerWidth < minWidth || screen.width < minWidth;
-}
-
 ScrollTrigger.create({
   trigger: "section.s-about",
   scrub: true,
@@ -71,13 +66,8 @@ ScrollTrigger.create({
   invalidateOnRefresh: true,
 });
 
-const split = new SplitText(".wrapper p", {
-  type: "words",
-  wordsClass: "word",
-});
-
-const scrollBar = document.querySelector(".scrollBar");
-
+const split = new SplitType(".wrapper p");
+const char = document.querySelectorAll(".wrapper p .line .word .char")
 const tl = gsap
   .timeline({
     scrollTrigger: {
@@ -89,16 +79,13 @@ const tl = gsap
     },
   })
   .set(
-    split.words,
+    char,
     {
       opacity: 1,
       stagger: 0.1,
     },
     0.1
-  )
-  .set(scrollBar, {
-    innerHeight: "+50%",
-  });
+  );
 
 document.addEventListener("DOMContentLoaded", function () {
   let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
@@ -162,12 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const childSplit = new SplitText(".instruction p", {
-    type: "words",
-    wordsClass: "word",
-  });
+  const childSplit = new SplitType(".instruction p");
+  const charLoad = document.querySelectorAll(".instruction p .line .word")
 
-  gsap.from(childSplit.words, {
+  gsap.from(charLoad, {
     duration: 1.5,
     yPercent: 150,
     opacity: 0,
@@ -196,8 +181,8 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 0.1,
   });
 
-  gsap.from(".loader_title", {
-    opacity: 0,
+  gsap.to(".loader_title", {
+    opacity: 1,
     duration: 2,
     ease: "ease",
     delay: 5,
@@ -213,8 +198,8 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 0.1,
     delay: 7.5,
   });
-  gsap.from(".loader_title_carpe", {
-    opacity: 0,
+  gsap.to(".loader_title_carpe", {
+    opacity: 1,
     duration: 2,
     ease: "ease",
     delay: 8,
