@@ -313,6 +313,7 @@ main {
 
 .container {
   font-size: 2rem;
+  padding: 0 2rem;
 }
 
 .image_container {
@@ -334,6 +335,27 @@ main {
   scale: 1;
 }
 
+@media (max-width: 1300px) {
+  #textSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .image_container {
+    width: 50%;
+  }
+  .container {
+    font-size: 1.5rem;
+    margin-top: 35%;
+  }
+}
+@media (max-width: 500px) {
+  .image_container {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
 .white > .word {
   opacity: 0.3;
   transition: all 0.3s ease-in-out;
