@@ -57,6 +57,11 @@ images.forEach((image, i) => {
   tl.to(image, { height: 0 });
 });
 
+function isMobile() {
+  const minWidth = 768; // Minimum width for desktop devices
+  return window.innerWidth < minWidth || screen.width < minWidth;
+}
+
 ScrollTrigger.create({
   trigger: "section.s-about",
   scrub: true,
