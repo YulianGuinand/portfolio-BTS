@@ -144,7 +144,7 @@ function shouldShowLoader() {
   }
 
   const currentTime = new Date().getTime();
-  const oneHour = 60 * 60 * 1000; // 1 heure en millisecondes
+  const oneHour = 30 * 60 * 1000; // 1 heure en millisecondes
 
   return currentTime - lastVisit > oneHour; // Affiche le loader si plus d'une heure s'est écoulée
 }
