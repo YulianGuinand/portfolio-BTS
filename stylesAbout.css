@@ -51,6 +51,15 @@ main {
   animation: draw 9s ease;
 }
 
+.loader_title,
+.loader_title_carpe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+
 @keyframes draw {
   from {
     stroke-dashoffset: 4500;
