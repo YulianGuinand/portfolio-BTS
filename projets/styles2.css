@@ -219,16 +219,37 @@ main {
   gap: 1rem;
 }
 
-.projet_image > div {
+.projet_image > img {
   width: 250px;
   height: 250px;
-  background: red;
+  object-fit: cover;
 }
 
 .projet_detail {
   width: 55%;
   display: flex;
   gap: 1.5rem;
+}
+
+.projet_detail .preview_btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 2rem;
+  background: #2d2d2d;
+  color: #ebebeb;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.projet_detail .preview_btn:hover {
+  background: #414040;
 }
 
 .projet_description {
@@ -290,7 +311,7 @@ main {
   .projet_number {
     width: 100%;
   }
-  .projet_image > div {
+  .projet_image > img {
     width: 50vw;
   }
 }
