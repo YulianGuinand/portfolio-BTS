@@ -28,7 +28,6 @@ videos.forEach((video) => {
 gsap.from(".footer", {
   y: -500,
   scrollTrigger: {
-    trigger: ".content",
     start: "bottom bottom",
     scrub: true,
   },
@@ -88,7 +87,6 @@ const tl = gsap
   );
 
 document.addEventListener("DOMContentLoaded", function () {
-  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
   const burger = document.querySelector(".burger");
   const toggleButton = document.querySelectorAll(".buttonLink");
   let isOpen = false;
@@ -110,17 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "power4.out",
     stagger: -0.2,
   });
-
-  timeline.to(
-    activeItemIndicator,
-    {
-      width: "100%",
-      duration: 1,
-      ease: "power4.out",
-      delay: 0.5,
-    },
-    "<"
-  );
 
   timeline.to(
     ".sub-nav",
@@ -233,7 +220,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const squareSize = Math.floor(Math.random()*100);
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const squareSize = 50;
 const canvas = document.getElementById("canvas");
 canvas.style.position = "absolute";
 const context = canvas.getContext("2d");

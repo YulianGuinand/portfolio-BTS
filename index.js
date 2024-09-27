@@ -52,7 +52,7 @@ form.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
+  
   const burger = document.querySelector(".burger");
   const toggleButton = document.querySelectorAll(".buttonLink");
   let isOpen = false;
@@ -76,17 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   timeline.to(
-    activeItemIndicator,
-    {
-      width: "100%",
-      duration: 1,
-      ease: "power4.out",
-      delay: 0.5,
-    },
-    "<"
-  );
-
-  timeline.to(
     ".sub-nav",
     {
       bottom: "10%",
@@ -99,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   toggleButton.forEach((button) => {
     button.addEventListener("click", function () {
-      console.log("click");
       if (isOpen) {
         timeline.reverse();
         burger.classList.toggle("active");
@@ -217,9 +205,8 @@ if (shouldShowLoader()) {
 }
 
 gsap.from(".footer", {
-  y: -5000,
+  y: -50000,
   scrollTrigger: {
-    trigger: ".content",
     start: "bottom bottom",
     scrub: true,
   },
