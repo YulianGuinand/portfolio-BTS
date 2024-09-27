@@ -193,41 +193,23 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 4.5,
       duration: 0.1,
     });
-  
-    gsap.to(".loader_title", {
+    gsap.to(".loader_title_carpe", {
       opacity: 1,
       duration: 2,
       ease: "ease",
       delay: 5,
     });
-    gsap.to(".loader_title", {
-      opacity: 0,
-      duration: 1,
-      ease: "ease",
-      delay: 6.5,
-    });
-    gsap.to(".loader_title", {
-      display: "none",
-      duration: 0.1,
-      delay: 7.5,
-    });
-    gsap.to(".loader_title_carpe", {
-      opacity: 1,
-      duration: 2,
-      ease: "ease",
-      delay: 8,
-    });
     gsap.to(".loader_title_carpe", {
       opacity: 0,
       duration: 1,
       ease: "ease",
-      delay: 10,
+      delay: 7,
     });
     gsap
       .to(".loader_title_carpe", {
         display: "none",
         duration: 0.1,
-        delay: 11,
+        delay: 8,
       })
       .then(() => {
         window.scrollTo(0, 0);
@@ -237,12 +219,12 @@ document.addEventListener("DOMContentLoaded", () => {
       top: "-100%",
       ease: "power4.inOut",
       duration: 2,
-      delay: 10.5,
+      delay: 8.5,
     });
     gsap.to(".loader", {
       display: "none",
       duration: 0.1,
-      delay: 12.5,
+      delay: 11,
     });
     localStorage.setItem("lastAboutTime", new Date().getTime());
   } else {
@@ -251,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const squareSize = 100;
+const squareSize = Math.floor(Math.random()*100);
 const canvas = document.getElementById("canvas");
 canvas.style.position = "absolute";
 const context = canvas.getContext("2d");
