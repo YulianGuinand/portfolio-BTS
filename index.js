@@ -241,9 +241,9 @@ gsap.fromTo(
 );
 gsap.fromTo(
   "#competencesSection .competences_container_three",
-  { x: "-50%" },
+  { x: "20%" },
   {
-    x: "50%",
+    x: "-20%",
     scrollTrigger: {
       scrub: true,
       start: "top bottom",

@@ -446,7 +446,6 @@ main {
 
 .comptences_list {
   width: 100%;
-  overflow: hidden;
   height: 10rem;
   display: flex;
   align-items: center;
