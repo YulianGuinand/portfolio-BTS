@@ -254,7 +254,7 @@ main {
 
 .projet_description {
   flex: 2;
-  line-break: anywhere;
+  line-break: normal;
   max-width: 300px;
 }
 
@@ -314,14 +314,15 @@ main {
   .projet_image > img {
     width: 50vw;
   }
+  .projet_image {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 800px) {
   .projet_title h1 {
     font-size: 3em;
-  }
-  .projet_image {
-    flex-direction: column;
+    text-align: center;
   }
 }
 
