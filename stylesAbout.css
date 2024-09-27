@@ -254,6 +254,7 @@ main {
   padding-top: 10rem;
   padding-bottom: 5rem;
   display: block;
+  overflow: hidden;
 }
 
 .s-about .slider-wrapper {
