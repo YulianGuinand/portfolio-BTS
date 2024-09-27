@@ -220,10 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
 const squareSize = 50;
 const canvas = document.getElementById("canvas");
 canvas.style.position = "absolute";
