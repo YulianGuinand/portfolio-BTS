@@ -58,6 +58,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
+  opacity: 0;
 }
 
 @keyframes draw {
@@ -357,7 +358,7 @@ main {
     margin-bottom: 2rem;
   }
 }
-.white > .word {
+.white > .line > .word > .char{
   opacity: 0.3;
   transition: all 0.3s ease-in-out;
 }
