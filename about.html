@@ -71,10 +71,27 @@
         <section class="s-about">
           <div class="slider-wrapper">
             <div class="slider">
-              <div class="panel red"></div>
-              <div class="panel purple"></div>
-              <div class="panel blue"></div>
-              <div class="panel orange"></div>
+              <div class="panel red">
+                <video
+                  class="videos"
+                  controls
+                  src="/assets/videos/video1.mp4"
+                ></video>
+              </div>
+              <div class="panel purple">
+                <video
+                  class="videos"
+                  controls
+                  src="/assets/videos/video2.mp4"
+                ></video>
+              </div>
+              <div class="panel blue">
+                <video
+                  class="videos"
+                  controls
+                  src="/assets/videos/video3.mp4"
+                ></video>
+              </div>
             </div>
           </div>
         </section>
@@ -157,6 +174,14 @@
     <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
 
     <script>
+      const videos = document.querySelectorAll(".videos");
+
+      videos.forEach((video) => {
+        window.addEventListener("scroll", () => {
+          video.pause();
+        });
+      });
+
       gsap.from(".footer", {
         y: -500,
         scrollTrigger: {
@@ -171,7 +196,7 @@
         zIndex: (i, target, targets) => targets.length - i,
       });
 
-      var images = gsap.utils.toArray(".panel:not(.orange)");
+      var images = gsap.utils.toArray(".panel:not(.blue)");
 
       images.forEach((image, i) => {
         var tl = gsap.timeline({
@@ -192,7 +217,6 @@
         trigger: "section.s-about",
         scrub: true,
         pin: true,
-        markers: true,
         start: "6% top",
         end: () => "+=" + (images.length + 1) * window.innerHeight,
         invalidateOnRefresh: true,
