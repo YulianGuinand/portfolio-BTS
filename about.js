@@ -1,3 +1,22 @@
+const initLenis = () => {
+  const lenis = new Lenis({
+    content: document.querySelector(".frame"),
+
+    lerp: 0.08,
+    smoothWheel: true,
+    orientation: "vertical",
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+};
+
+initLenis();
+
 const videos = document.querySelectorAll(".videos");
 
 videos.forEach((video) => {
@@ -14,6 +33,7 @@ gsap.from(".footer", {
     scrub: true,
   },
 });
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.set(".panel", {
@@ -133,5 +153,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       isOpen = !isOpen;
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const childSplit = new SplitText(".instruction p", {
+    type: "words",
+    wordsClass: "word",
+  });
+
+  gsap.from(childSplit.words, {
+    duration: 1.5,
+    yPercent: 150,
+    opacity: 0,
+    ease: "power4",
+    stagger: 0.1,
+  });
+
+  gsap.to(".loader", {
+    top: "-100%",
+    ease: "power4.inOut",
+    duration: 2,
+    delay: 3.5,
+  });
+  gsap.to(".loader", {
+    display: "none",
+    duration: 0.1,
+    delay: 9,
   });
 });
