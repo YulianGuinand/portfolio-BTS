@@ -61,7 +61,8 @@ ScrollTrigger.create({
   trigger: "section.s-about",
   scrub: true,
   pin: true,
-  start: "6% top",
+  start: "13% top",
+  markers: true,
   end: () => "+=" + (images.length + 1) * window.innerHeight,
   invalidateOnRefresh: true,
 });
