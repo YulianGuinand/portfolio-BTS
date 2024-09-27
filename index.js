@@ -136,66 +136,85 @@ function startLoader() {
   updateCounter();
 }
 
-startLoader();
+// Fonction pour vérifier si plus d'une heure s'est écoulée
+function shouldShowLoader() {
+  const lastVisit = localStorage.getItem("lastLoaderTime");
+  if (!lastVisit) {
+    return true; // Pas de visite précédente enregistrée, donc on affiche le loader
+  }
 
-gsap.from(".circles", 2, {
-  top: "-100%",
-  ease: "elastic.out",
-  delay: 0.5,
-});
+  const currentTime = new Date().getTime();
+  const oneHour = 60 * 60 * 1000; // 1 heure en millisecondes
 
-gsap.to(".circle-inner-rotator", 1, {
-  width: "50%",
-  height: "40%",
-  ease: "power4.inOut",
-  delay: 1.5,
-});
-gsap.to(".circle-inner-rotator", 1, {
-  left: "0%",
-  transform: "translateX(0)",
-  ease: "power4.inOut",
-  delay: 2.5,
-});
-gsap.to(".circle-inner-rotator", 1, {
-  bottom: 0,
-  ease: "power4.inOut",
-  delay: 3.5,
-});
-gsap.to(".circle-inner-rotator", 1, {
-  transform: "translateX(-100%)",
-  left: "calc(100%)",
-  ease: "power4.inOut",
-  delay: 4.5,
-});
-gsap.to(".circle-inner-rotator", 1, {
-  top: "0",
-  ease: "power4.inOut",
-  delay: 5.5,
-});
-gsap.to(".circle-inner-rotator", 1, {
-  transform: "translateX(-50%)",
-  top: "0",
-  left: "50%",
-  ease: "power4.inOut",
-  delay: 6.5,
-});
-gsap.to(".circle-content", 1, {
-  height: "100%",
-  ease: "power4.inOut",
-  delay: 7,
-});
+  return currentTime - lastVisit > oneHour; // Affiche le loader si plus d'une heure s'est écoulée
+}
 
-gsap.to(".loader", {
-  top: "-100%",
-  ease: "power4.inOut",
-  duration: 3,
-  delay: 7.5,
-});
-gsap.to(".loader", {
-  display: "none",
-  duration: 0.1,
-  delay: 13,
-});
+if (shouldShowLoader()) {
+  startLoader();
+
+  gsap.from(".circles", 2, {
+    top: "-100%",
+    ease: "elastic.out",
+    delay: 0.5,
+  });
+
+  gsap.to(".circle-inner-rotator", 1, {
+    width: "50%",
+    height: "40%",
+    ease: "power4.inOut",
+    delay: 1.5,
+  });
+  gsap.to(".circle-inner-rotator", 1, {
+    left: "0%",
+    transform: "translateX(0)",
+    ease: "power4.inOut",
+    delay: 2.5,
+  });
+  gsap.to(".circle-inner-rotator", 1, {
+    bottom: 0,
+    ease: "power4.inOut",
+    delay: 3.5,
+  });
+  gsap.to(".circle-inner-rotator", 1, {
+    transform: "translateX(-100%)",
+    left: "calc(100%)",
+    ease: "power4.inOut",
+    delay: 4.5,
+  });
+  gsap.to(".circle-inner-rotator", 1, {
+    top: "0",
+    ease: "power4.inOut",
+    delay: 5.5,
+  });
+  gsap.to(".circle-inner-rotator", 1, {
+    transform: "translateX(-50%)",
+    top: "0",
+    left: "50%",
+    ease: "power4.inOut",
+    delay: 6.5,
+  });
+  gsap.to(".circle-content", 1, {
+    height: "100%",
+    ease: "power4.inOut",
+    delay: 7,
+  });
+
+  gsap.to(".loader", {
+    top: "-100%",
+    ease: "power4.inOut",
+    duration: 3,
+    delay: 7.5,
+  });
+  gsap.to(".loader", {
+    display: "none",
+    duration: 0.1,
+    delay: 13,
+  });
+  localStorage.setItem("lastLoaderTime", new Date().getTime());
+} else {
+  const loader = document.querySelector(".loader");
+  loader.style.display = "none";
+}
 
 gsap.from(".footer", {
   y: -5000,
