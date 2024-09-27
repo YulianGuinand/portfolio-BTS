@@ -23,6 +23,60 @@ main {
   background-color: #fff;
   margin-bottom: 400px;
 }
+/* LOADER */
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #2d2d2d;
+  color: #ebebeb;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+.loader svg {
+  width: 205px;
+  height: 200px;
+  fill-opacity: 0;
+  stroke: #ebebeb;
+  stroke-width: 7px;
+  stroke-dasharray: 4500;
+  animation: draw 9s ease;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 4500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loader .instruction {
+  padding: 0 2rem;
+}
+@media (max-width: 500px) {
+  .loader .instruction {
+    font-size: 14px;
+  }
+  .loader svg {
+    width: 105px;
+    height: 100px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  .loader .instruction {
+    font-size: 1.5rem;
+  }
+}
 
 /* NAVBAR */
 
@@ -194,76 +248,43 @@ main {
 }
 
 .s-about .slider-wrapper {
-  margin-inline: auto;
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 80vh;
+  width: 90vw;
+  height: calc(90vw * 16 / 9);
+  max-height: 90vh;
+  max-width: calc(90vh * 9 / 16);
+  background-color: #000;
+  border-radius: 16px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .s-about .slider-wrapper .slider {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
-.s-about .slider-wrapper::before {
-  content: "SALUT,";
-  position: absolute;
-  top: 0;
-  transform: translateY(-35%);
-  left: 1rem;
-  font-size: 3rem;
-  color: #2d2d2d;
-  z-index: 99;
-}
-
-.s-about .slider-wrapper::after {
-  content: "JE SUIS YULIAN";
-  position: absolute;
-  bottom: 0;
-  transform: translateY(55%);
-  right: 1rem;
-  color: #2d2d2d;
-  font-size: 3rem;
-  z-index: 99;
-}
-
-@media (max-width: 450px) {
-  .s-about .slider-wrapper::before,
-  .s-about .slider-wrapper::after {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 450px) {
-}
-@media (min-width: 775px) {
-  .s-about .slider-wrapper::before,
-  .s-about .slider-wrapper::after {
-    font-size: 5rem;
-  }
-}
-@media (min-width: 1500px) {
-  .s-about .slider-wrapper::before,
-  .s-about .slider-wrapper::after {
-    font-size: 8rem;
-  }
-}
 .panel {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel video {
   position: absolute;
-}
-.red {
-  background: red;
-}
-.purple {
-  background: purple;
-}
-.blue {
-  background-color: blue;
-}
-.orange {
-  background: orange;
+  width: 100%;
+  height: 80vh;
+  width: 90vw;
+  height: calc(90vw * 16 / 9);
+  max-height: 90vh;
+  max-width: calc(90vh * 9 / 16);
 }
 
 #textSection {

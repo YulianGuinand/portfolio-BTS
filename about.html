@@ -10,6 +10,44 @@
   </head>
   <body data-scroll-container>
     <div class="frame" id="frame">
+      <div class="loader">
+        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+        <svg
+          id="loader_svg"
+          width="100%"
+          height="100%"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <path
+                d="M469.199,278.033C465.79,138.056,390.164,53.333,256,53.333C114.831,53.333,21.333,146.831,21.333,288
+			c0,2.249,0.353,4.415,0.998,6.45C8.463,309.624,0,329.821,0,352c0,47.131,38.202,85.333,85.333,85.333
+			c1.264,0,2.495-0.131,3.698-0.342c14.249,13.429,33.438,21.675,54.568,21.675H156.1c19.825,0,35.904-16.079,35.904-35.904V281.237
+			c0-19.825-16.079-35.904-35.904-35.904h-12.501c-21.13,0-40.319,8.246-54.568,21.675c-1.203-0.211-2.434-0.342-3.698-0.342
+			c-7.128,0-14.046,0.887-20.664,2.533C72.237,162.528,144.794,96,256,96c105.549,0,163.571,60.491,170.05,170.698
+			c-1.048,0.03-2.076,0.134-3.081,0.31c-14.249-13.429-33.438-21.675-54.568-21.675H355.9c-19.825,0-35.904,16.079-35.904,35.904
+			v141.525c0,19.825,16.079,35.904,35.904,35.904h12.501c21.13,0,40.319-8.246,54.568-21.675c1.203,0.211,2.434,0.342,3.698,0.342
+			C473.798,437.333,512,399.131,512,352C512,320.362,494.773,292.769,469.199,278.033z M64,388.96
+			c-12.754-7.376-21.333-21.165-21.333-36.96S51.246,322.416,64,315.04V388.96z M106.671,324.928
+			c0-20.397,16.527-36.928,36.928-36.928h5.739v128h-5.739c-20.401,0-36.928-16.531-36.928-36.928V324.928z M405.329,379.072
+			c0,20.397-16.527,36.928-36.928,36.928h-5.739V288h5.739c20.401,0,36.928,16.531,36.928,36.928V379.072z M448,388.96v-73.92
+			c12.754,7.376,21.333,21.165,21.333,36.96S460.754,381.584,448,388.96z"
+              />
+            </g>
+          </g>
+        </svg>
+
+        <div class="instruction">
+          <p>Pour une meilleur expérience, utilisez des écouteurs.</p>
+        </div>
+      </div>
+
       <nav class="navbar">
         <div class="info">
           <p>Portfolio. 1</p>
@@ -71,10 +109,27 @@
         <section class="s-about">
           <div class="slider-wrapper">
             <div class="slider">
-              <div class="panel red"></div>
-              <div class="panel purple"></div>
-              <div class="panel blue"></div>
-              <div class="panel orange"></div>
+              <div class="panel red">
+                <video
+                  class="videos"
+                  controls
+                  src="/assets/videos/video1.mp4"
+                ></video>
+              </div>
+              <div class="panel purple">
+                <video
+                  class="videos"
+                  controls
+                  src="/assets/videos/video2.mp4"
+                ></video>
+              </div>
+              <div class="panel blue">
+                <video
+                  class="videos"
+                  controls
+                  src="/assets/videos/video3.mp4"
+                ></video>
+              </div>
             </div>
           </div>
         </section>
@@ -155,143 +210,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
-
-    <script>
-      gsap.from(".footer", {
-        y: -500,
-        scrollTrigger: {
-          trigger: ".content",
-          start: "bottom bottom",
-          scrub: true,
-        },
-      });
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.set(".panel", {
-        zIndex: (i, target, targets) => targets.length - i,
-      });
-
-      var images = gsap.utils.toArray(".panel:not(.orange)");
-
-      images.forEach((image, i) => {
-        var tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "section.s-about",
-            start: () => "top -" + window.innerHeight * (i + 0.5),
-            end: () => "+=" + window.innerHeight,
-            scrub: true,
-            toggleActions: "play none reverse none",
-            invalidateOnRefresh: true,
-          },
-        });
-
-        tl.to(image, { height: 0 });
-      });
-
-      ScrollTrigger.create({
-        trigger: "section.s-about",
-        scrub: true,
-        pin: true,
-        start: "top top",
-        end: () => "+=" + (images.length + 1) * window.innerHeight,
-        invalidateOnRefresh: true,
-      });
-
-      const split = new SplitText(".wrapper p", {
-        type: "words",
-        wordsClass: "word",
-      });
-
-      const scrollBar = document.querySelector(".scrollBar");
-
-      const tl = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: "#textSection",
-            start: "top top",
-            end: "+=150%",
-            scrub: true,
-            pin: true,
-          },
-        })
-        .set(
-          split.words,
-          {
-            opacity: 1,
-            stagger: 0.1,
-          },
-          0.1
-        )
-        .set(scrollBar, {
-          innerHeight: "+50%",
-        });
-    </script>
-
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script src="../index.js"></script>
-
     <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let activeItemIndicator = CSSRulePlugin.getRule(
-          ".menu-item p#active::after"
-        );
-        const burger = document.querySelector(".burger");
-        const toggleButton = document.querySelectorAll(".buttonLink");
-        let isOpen = false;
-
-        gsap.set(".menu-item p", { y: 225 });
-
-        const timeline = gsap.timeline({ paused: true });
-
-        timeline.to(".overlay", {
-          duration: 1.5,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          ease: "power4.out",
-        });
-
-        timeline.to(".menu-item p", {
-          duration: 1.5,
-          y: 0,
-          ease: "power4.out",
-          stagger: 0.2,
-        });
-
-        timeline.to(
-          activeItemIndicator,
-          {
-            width: "100%",
-            duration: 1,
-            ease: "power4.out",
-            delay: 0.5,
-          },
-          "<"
-        );
-
-        timeline.to(
-          ".sub-nav",
-          {
-            bottom: "10%",
-            opacity: 1,
-            duration: 0.5,
-            delay: 0.5,
-          },
-          "<"
-        );
-
-        toggleButton.forEach((button) => {
-          button.addEventListener("click", function () {
-            if (isOpen) {
-              timeline.reverse();
-              burger.classList.toggle("active");
-            } else {
-              burger.classList.toggle("active");
-              timeline.play();
-            }
-            isOpen = !isOpen;
-          });
-        });
-      });
-    </script>
+    <script src="/about.js"></script>
   </body>
 </html>
