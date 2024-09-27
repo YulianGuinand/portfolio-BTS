@@ -170,15 +170,75 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.1,
   });
 
+  gsap.to(".loader svg", {
+    opacity: 0,
+    delay: 3.5,
+    duration: 1,
+  });
+  gsap.to(".loader .instruction", {
+    opacity: 0,
+    delay: 3.5,
+    duration: 1,
+  });
+  gsap.to(".loader svg", {
+    display: "none",
+    delay: 4.5,
+    duration: 0.1,
+  });
+  gsap.to(".loader .instruction", {
+    display: "none",
+    delay: 4.5,
+    duration: 0.1,
+  });
+
+  gsap.from(".loader_title", {
+    opacity: 0,
+    duration: 2,
+    ease: "ease",
+    delay: 5,
+  });
+  gsap.to(".loader_title", {
+    opacity: 0,
+    duration: 1,
+    ease: "ease",
+    delay: 6.5,
+  });
+  gsap.to(".loader_title", {
+    display: "none",
+    duration: 0.1,
+    delay: 7.5,
+  });
+  gsap.from(".loader_title_carpe", {
+    opacity: 0,
+    duration: 2,
+    ease: "ease",
+    delay: 8,
+  });
+  gsap.to(".loader_title_carpe", {
+    opacity: 0,
+    duration: 1,
+    ease: "ease",
+    delay: 10,
+  });
+  gsap
+    .to(".loader_title_carpe", {
+      display: "none",
+      duration: 0.1,
+      delay: 11,
+    })
+    .then(() => {
+      window.scrollTo(0, 0);
+    });
+
   gsap.to(".loader", {
     top: "-100%",
     ease: "power4.inOut",
     duration: 2,
-    delay: 3.5,
+    delay: 10.5,
   });
   gsap.to(".loader", {
     display: "none",
     duration: 0.1,
-    delay: 9,
+    delay: 12.5,
   });
 });
