@@ -321,7 +321,6 @@ main {
 .image_container {
   width: 30%;
   height: 50%;
-  background: red;
   overflow: hidden;
 }
 
@@ -343,19 +342,47 @@ main {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    height: 100vh;
   }
   .image_container {
     width: 50%;
   }
   .container {
     font-size: 1.5rem;
-    margin-top: 35%;
+    /* margin-top: 35%; */
   }
 }
+
+@media (max-width: 540px) and (max-height: 720px) {
+  .container {
+    margin-top: 30%;
+  }
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+  .container {
+    margin-top: 10%;
+  }
+}
+
 @media (max-width: 500px) {
+  .container {
+    margin-top: 30%;
+  }
   .image_container {
     width: 90%;
-    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  #textSection {
+    height: 100%;
+  }
+  .container {
+    margin-top: 50%;
+  }
+  .image_container {
+    width: 90%;
+    margin-bottom: 30%;
   }
 }
 .white > .line > .word > .char{
