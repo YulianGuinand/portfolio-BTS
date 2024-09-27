@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles2.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <title>Projet 2</title>
+    <title>Ping Pong</title>
   </head>
   <body data-scroll-container>
     <div class="frame" id="frame">
@@ -70,53 +70,41 @@
       <main>
         <section id="projet_section">
           <div class="projet_container">
-            <div class="projet_title">
-              <h1>
-                Yotion, <br />
-                Clone de Notion
-              </h1>
-            </div>
             <div class="projet_content">
-              <div class="projet_image">
-                <img src="../assets/yotion.png" />
-                <img src="../assets/yotion_2.png" />
-              </div>
+              <h1>
+                Ping <br />
+                Pong
+              </h1>
+              <p>
+                Ping Pong est un projet qui consiste en la création du site web
+                de mon club de ping-pong, situé à Mont sous Vaudray. En
+                utilisant HTML, CSS et JavaScript, j'ai conçu un site dynamique
+                et convivial qui présente notre club, ses activités et ses
+                membres. Ce projet représente l'un de mes premiers sites web
+                complets, me permettant d'appliquer mes compétences de manière
+                concrète tout en découvrant les fondamentaux du développement
+                web.
+              </p>
+              <p>
+                Au cours de cette expérience, j'ai appris à structurer
+                efficacement un site et à améliorer son esthétique grâce à CSS.
+                De plus, l'intégration de JavaScript m'a permis d'ajouter des
+                fonctionnalités interactives, rendant l'expérience utilisateur
+                plus engageante. Ce projet a renforcé ma passion pour le
+                développement web et m'a donné une base solide pour mes futurs
+                travaux.
+              </p>
+            </div>
+            <div class="projet_image">
+              <img src="../assets/ping_website.jpg" alt="PingWebsite" />
+            </div>
 
-              <div class="projet_detail">
-                <a
-                  href="https://yotion-ten.vercel.app/"
-                  target="_blank"
-                  class="preview_btn btn"
-                  >Voir le Site.</a
-                >
-                <div class="projet_description">
-                  <p>
-                    <strong>Yotion</strong> est un projet visant à créer un
-                    clone de Notion, une application collaborative qui permet de
-                    gérer des notes, bases de données et tâches dans une
-                    interface unifiée. Pour Yotion, j'ai utilisé Next.js et
-                    TypeScript, ce qui m'a permis de construire une application
-                    rapide, robuste et performante, en reproduisant les
-                    principales fonctionnalités de Notion.
-                  </p>
-                </div>
-                <div class="projet_description">
-                  <p>
-                    Le développement de Yotion m'a confronté à divers défis
-                    techniques, notamment en matière de performance et
-                    d'interactions collaboratives. <br /><br />L’utilisation de
-                    Next.js et TypeScript a permis de garantir une application
-                    fluide et évolutive, tout en renforçant mes compétences en
-                    développement full-stack.
-                  </p>
-                </div>
-                <div class="projet_number">
-                  <div class="projet_title">
-                    <h1>2.</h1>
-                  </div>
-                  <a class="projet_link" href="./projet1.html">précédent</a>
-                  <a class="projet_link" href="./projet3.html">prochain</a>
-                </div>
+            <div class="projet_number">
+              <h1>2.</h1>
+
+              <div class="links">
+                <a href="./projet1.html" class="projet_link"> précédent </a>
+                <a href="./projet3.html" class="projet_link"> prochain </a>
               </div>
             </div>
           </div>
@@ -173,6 +161,7 @@
         </footer>
       </div>
     </div>
+
     <script>
       gsap.from(".footer", {
         y: -200,
@@ -183,9 +172,10 @@
         },
       });
     </script>
+
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script src="./index.js"></script>
 
     <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

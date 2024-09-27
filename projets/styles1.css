@@ -195,44 +195,76 @@ main {
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 15em 2em 0 2em;
-  gap: 1rem;
-}
-
-.projet_content {
-  max-width: 50%;
-  display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  justify-content: space-between;
+  padding: 7rem 2rem 4rem 2rem;
 }
 
-.projet_content h1 {
+.projet_title h1 {
   font-size: 5em;
 }
 
-.projet_content p {
-  line-break: none;
+.projet_content {
+  width: 100%;
+  max-height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .projet_image {
-  width: 500px;
-  height: 100%;
-  background: red;
-  margin-left: 1rem;
+  max-width: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.projet_image > img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.projet_detail {
+  width: 55%;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.projet_detail .preview_btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 2rem;
+  background: #2d2d2d;
+  color: #ebebeb;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.projet_detail .preview_btn:hover {
+  background: #414040;
+}
+
+.projet_description {
+  flex: 2;
+  line-break: normal;
+  max-width: 300px;
 }
 
 .projet_number {
   flex: 1;
-  width: auto;
   height: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 3rem;
-}
-
-.projet_number h1 {
-  font-size: 5em;
 }
 
 .projet_number .projet_link {
@@ -258,29 +290,39 @@ main {
   width: 100%;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1300px) {
   #projet_section {
     height: 100%;
   }
   .projet_container {
-    flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
-  .projet_image {
-    order: -1;
-    width: 90%;
-    height: 500px;
+  .projet_content {
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .projet_detail {
+    align-items: center;
+    flex-direction: column;
   }
   .projet_number {
     width: 100%;
   }
-  .projet_content h1 {
-    font-size: 3em;
+  .projet_image > img {
+    width: 50vw;
   }
+  .projet_image {
+    flex-direction: column;
+  }
+}
 
-  .projet_content p {
-    min-width: 220px;
-    line-break: normal;
+@media (max-width: 800px) {
+  .projet_title h1 {
+    font-size: 3em;
+    text-align: center;
   }
 }
 
