@@ -466,6 +466,13 @@ main {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 1000px) {
+  .comptences_list p {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+}
+
 .comptences_list p:hover {
   background: #414040;
 }
@@ -603,4 +610,3 @@ main {
   font-size: 0.8em;
   margin: 6em 0 0 0;
 }
-
