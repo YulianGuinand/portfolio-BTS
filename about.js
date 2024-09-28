@@ -66,7 +66,7 @@ ScrollTrigger.create({
 });
 
 const split = new SplitType(".wrapper p");
-const char = document.querySelectorAll(".wrapper p .line .word .char")
+const char = document.querySelectorAll(".wrapper p .line .word .char");
 const tl = gsap
   .timeline({
     scrollTrigger: {
@@ -150,8 +150,8 @@ function shouldShowLoader() {
 document.addEventListener("DOMContentLoaded", () => {
   if (shouldShowLoader()) {
     const childSplit = new SplitType(".instruction p");
-    const charLoad = document.querySelectorAll(".instruction p .line .word")
-  
+    const charLoad = document.querySelectorAll(".instruction p .line .word");
+
     gsap.from(charLoad, {
       duration: 1.5,
       yPercent: 150,
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power4",
       stagger: 0.1,
     });
-  
+
     gsap.to(".loader svg", {
       opacity: 0,
       delay: 3.5,
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(() => {
         window.scrollTo(0, 0);
       });
-  
+
     gsap.to(".loader", {
       top: "-100%",
       ease: "power4.inOut",
