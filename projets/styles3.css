@@ -182,7 +182,17 @@ main {
     font-size: 20px;
   }
 }
-
+@media (max-width: 300px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  .navbar .info {
+    margin-bottom: 10px;
+  }
+}
 /* PROJET SECTION */
 
 #projet_section {
@@ -362,4 +372,9 @@ main {
   opacity: 0.5;
   font-size: 0.8em;
   margin: 6em 0 0 0;
+}
+@media (max-width: 900px) {
+  .content__inner {
+    padding: 20px;
+  }
 }
