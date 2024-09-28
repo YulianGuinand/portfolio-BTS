@@ -357,6 +357,12 @@ main {
 }
 
 @media (max-width: 300px) {
+  .home_container {
+    height: 100%;
+  }
+  #home .home_description {
+    height: 100%;
+  }
   #home .home_image {
     width: 90%;
   }
