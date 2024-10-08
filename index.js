@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   timeline.to(".menu-item p", {
     delay: -0.9,
-    duration: 1.5,
+    duration: 1,
     y: 0,
     ease: "power4.out",
     stagger: -0.2,
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       bottom: "10%",
       opacity: 1,
-      duration: 0.5,
+      duration: 0.2,
       delay: 0.5,
     },
     "<"
@@ -89,8 +89,33 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButton.forEach((button) => {
     button.addEventListener("click", function () {
       if (isOpen) {
-        timeline.reverse();
+        timeline.to(
+          ".sub-nav",
+          {
+            bottom: "0%",
+            opacity: 0,
+            duration: 0.2,
+            delay: 0.5,
+          },
+          "<"
+        );
+        timeline.to(".menu-item p", {
+          delay: -0.1,
+          duration: 1,
+          y: -100,
+          ease: "power4.out",
+          stagger: -0.2,
+        });
+        timeline.to(".overlay", {
+          duration: 1,
+          delay: -1,
+          height: "0%",
+          clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+          ease: "power4.out",
+        });
+        
         burger.classList.toggle("active");
+      
       } else {
         burger.classList.toggle("active");
         timeline.play();
@@ -117,7 +142,7 @@ function startLoader() {
 
     counterElement.textContent = currentValue + "%";
 
-    let delay = Math.floor(Math.random() * 200) + 250;
+    let delay = Math.floor(Math.random() * 25) + 37;
     setTimeout(updateCounter, delay);
   }
 
@@ -140,63 +165,64 @@ function shouldShowLoader() {
 if (shouldShowLoader()) {
   startLoader();
 
-  gsap.from(".circles", 2, {
-    top: "-100%",
-    ease: "elastic.out",
-    delay: 0.5,
-  });
+  // gsap.from(".circles", 2, {
+  //   top: "-100%",
+  //   ease: "elastic.out",
+  //   duration: 1,
+  //   delay: 0.1,
+  // });
 
-  gsap.to(".circle-inner-rotator", 1, {
-    width: "50%",
-    height: "40%",
-    ease: "power4.inOut",
-    delay: 1.5,
-  });
-  gsap.to(".circle-inner-rotator", 1, {
-    left: "0%",
-    transform: "translateX(0)",
-    ease: "power4.inOut",
-    delay: 2.5,
-  });
-  gsap.to(".circle-inner-rotator", 1, {
-    bottom: 0,
-    ease: "power4.inOut",
-    delay: 3.5,
-  });
-  gsap.to(".circle-inner-rotator", 1, {
-    transform: "translateX(-100%)",
-    left: "calc(100%)",
-    ease: "power4.inOut",
-    delay: 4.5,
-  });
-  gsap.to(".circle-inner-rotator", 1, {
-    top: "0",
-    ease: "power4.inOut",
-    delay: 5.5,
-  });
-  gsap.to(".circle-inner-rotator", 1, {
-    transform: "translateX(-50%)",
-    top: "0",
-    left: "50%",
-    ease: "power4.inOut",
-    delay: 6.5,
-  });
-  gsap.to(".circle-content", 1, {
-    height: "100%",
-    ease: "power4.inOut",
-    delay: 7,
-  });
+  // gsap.to(".circle-inner-rotator", 1, {
+  //   width: "50%",
+  //   height: "40%",
+  //   ease: "power4.inOut",
+  //   delay: 0.5,
+  // });
+  // gsap.to(".circle-inner-rotator", 1, {
+  //   left: "0%",
+  //   transform: "translateX(0)",
+  //   ease: "power4.inOut",
+  //   delay: 1,
+  // });
+  // gsap.to(".circle-inner-rotator", 1, {
+  //   bottom: 0,
+  //   ease: "power4.inOut",
+  //   delay: 1.5,
+  // });
+  // gsap.to(".circle-inner-rotator", 1, {
+  //   transform: "translateX(-100%)",
+  //   left: "calc(100%)",
+  //   ease: "power4.inOut",
+  //   delay: 2,
+  // });
+  // gsap.to(".circle-inner-rotator", 1, {
+  //   top: "0",
+  //   ease: "power4.inOut",
+  //   delay: 2.5,
+  // });
+  // gsap.to(".circle-inner-rotator", 1, {
+  //   transform: "translateX(-50%)",
+  //   top: "0",
+  //   left: "50%",
+  //   ease: "power4.inOut",
+  //   delay: 3,
+  // });
+  // gsap.to(".circle-content", 1, {
+  //   height: "100%",
+  //   ease: "power4.inOut",
+  //   delay: 1,
+  // });
 
   gsap.to(".loader", {
     top: "-100%",
     ease: "power4.inOut",
-    duration: 3,
-    delay: 7.5,
+    duration: 1.5,
+    delay: 1.5,
   });
   gsap.to(".loader", {
     display: "none",
     duration: 0.1,
-    delay: 13,
+    delay: 4.5,
   });
   localStorage.setItem("lastLoaderTime", new Date().getTime());
 } else {
