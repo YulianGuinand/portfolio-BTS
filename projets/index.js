@@ -18,7 +18,7 @@ const initLenis = () => {
 initLenis();
 
 document.addEventListener("DOMContentLoaded", function () {
-  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
+  
   const burger = document.querySelector(".burger");
   const toggleButton = document.querySelectorAll(".buttonLink");
   let isOpen = false;
@@ -35,29 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   timeline.to(".menu-item p", {
     delay: -0.9,
-    duration: 1.5,
+    duration: 1,
     y: 0,
     ease: "power4.out",
     stagger: -0.2,
   });
 
   timeline.to(
-    activeItemIndicator,
-    {
-      width: "100%",
-      duration: 1,
-      ease: "power4.out",
-      delay: 0.5,
-    },
-    "<"
-  );
-
-  timeline.to(
     ".sub-nav",
     {
       bottom: "10%",
       opacity: 1,
-      duration: 0.5,
+      duration: 0.2,
       delay: 0.5,
     },
     "<"
@@ -66,8 +55,33 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButton.forEach((button) => {
     button.addEventListener("click", function () {
       if (isOpen) {
-        timeline.reverse();
+        timeline.to(
+          ".sub-nav",
+          {
+            bottom: "0%",
+            opacity: 0,
+            duration: 0.2,
+            delay: 0.5,
+          },
+          "<"
+        );
+        timeline.to(".menu-item p", {
+          delay: -0.1,
+          duration: 1,
+          y: -100,
+          ease: "power4.out",
+          stagger: -0.2,
+        });
+        timeline.to(".overlay", {
+          duration: 1,
+          delay: -1,
+          height: "0%",
+          clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+          ease: "power4.out",
+        });
+        
         burger.classList.toggle("active");
+      
       } else {
         burger.classList.toggle("active");
         timeline.play();
